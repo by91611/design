@@ -36,6 +36,10 @@ body {
 em { 
     font-style: normal;
 }
+/* li 앞의 기호 삭제 */
+li {
+    list-style: none;
+}
 .intro{
     text-align: center;
     margin: 130px 0 130px 0;
@@ -98,4 +102,53 @@ em {
 .overview p strong {
     font-weight: 600;
     text-decoration: underline;
+}
+.color {
+    margin: 100px 0 110px 0;
+}
+.color h1 {
+    color: #1d1d1d;
+    font-size: 50px;
+    font-weight: 600;
+    margin: 0 0 50px 0;
+}
+.color h2 {
+    color: #1d1d1d;
+    font-size: 25px;
+    font-weight: 600;
+    margin: 60px 0 15px 0;
+}
+.color ul {
+    display: flex;
+    justify-content: space-between;
+}
+.color ul li {
+    width: 190px;
+    height: 339px;
+    color: #ffffff;
+    padding: 220px 0 0 22px;
+}
+.color ul li.blue {
+    background-color: #00507d;
+}
+.color ul li.lb {
+    background-color: #00a5e5;
+}
+.color ul li.dg {
+    background-color: #4b5151;
+}
+.color ul li.lg {
+    background-color: #bcbdbb;
+}
+.color ul li.gold {
+    background-color: #86754e;
+}
+.color ul li.silver {
+    background-color: #8d908f;
+}
+.color ul li h3 {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.2;
+    margin: 0 0 30px 0;
 }
