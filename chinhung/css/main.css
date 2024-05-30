@@ -1,0 +1,78 @@
+@import url(default.css); /*default.css 불러오기 */
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 800;
+	font-display: swap;
+	src: local('Pretendard ExtraBold'), url(../fonts/Pretendard-ExtraBold.woff2) format('woff2'), url(../fonts/Pretendard-ExtraBold.woff) format('woff');
+}
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 400;
+	font-display: swap;
+	src: local('Pretendard Regular'), url(../fonts/Pretendard-Regular.woff2) format('woff2'), url(../fonts/Pretendard-Regular.woff) format('woff');
+}
+
+html, body {
+    /* font-family 서체명은 font-face에서 사용한 이름으로 사용 */
+    font-family: "Pretendard", sans-serif; /* sans-serif는 고딕체 */
+    font-size: 15px;
+    font-weight: 400;
+    color: #3d3d3d;
+    line-height: 1.4; /* 행간 */
+    letter-spacing: 0; /* 자간 */
+    word-break: keep-all;
+}
+.wrapper {
+    width: 1260px;
+    margin: 0 auto;
+}
+header {
+    height: 100px;
+}
+header .wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+header .logo {
+    margin: 30px 0 0 0;
+}
+header .gnb ul {
+    display: flex;
+}
+header .gnb ul li a {
+    font-size: 22px;
+    color: #1d1d1d;
+    line-height:  100px; /* header의 높이와 동일한 값 */ 
+    /* 행간을 높이값(height)만큼 주면 글자가 위아래 가운데로 정렬 */
+    display: block; /* line 요소인 a를 block 요소로 변경 -> 여백 줄 수 있음*/
+    padding: 0 25.5px; /*  위아래 좌우 */
+}
+header .gnb ul li a:hover { /* hover - 마우스를 오버했을 때 */
+    font-weight: 800;
+    color: #114294;
+}
+.visual {
+    background: url(../images/visual_bg.png) no-repeat center center / cover;
+    height: 700px;
+    color: #fff;
+    text-align: center;
+}
+.visual h2 {
+    font-size: 65px;
+    font-weight: 800;
+    line-height: 1.1;
+    padding: 205px 0 25px 0;
+}
+.biz .tit {
+    text-align: center
+}
+.biz .tit h2 {
+    font-size: 50px;
+    font-weight: 800;
+    color: #1d1d1d;
+    margin: 110px 0 0 0;
+}
+.biz .tit p {
+    margin: -5px 0 40px 0;
+}
