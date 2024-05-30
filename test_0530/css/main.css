@@ -1,0 +1,81 @@
+@import url(default.css); /*default.css 불러오기 */
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 700;
+	font-display: swap;
+	src: local('Pretendard Bold'), url(../fonts/Pretendard-Bold.woff2) format('woff2'), url(../fonts/Pretendard-Bold.woff) format('woff');
+}
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 400;
+	font-display: swap;
+	src: local('Pretendard Regular'), url(../fonts/Pretendard-Regular.woff2) format('woff2'), url(../fonts/Pretendard-Regular.woff) format('woff');
+}
+
+html, body {
+    /* font-family 서체명은 font-face에서 사용한 이름으로 사용 */
+    font-family: "Pretendard", sans-serif; /* sans-serif는 고딕체 */
+    font-size: 16px;
+    font-weight: 400;
+    color: #3d3d3d;
+    line-height: 1.5; /* 행간 */
+    letter-spacing: 0; /* 자간 */
+    word-break: keep-all;
+}
+.wrapper {
+    width: 1260px;
+    margin: 0 auto;
+}
+h1 {
+    font-size: 75px;
+    font-weight: 700;
+    color: #1d1d1d;
+    text-align: center; /* text 가운데 정렬 */
+    margin: 175px 0 45px 0;
+}
+.only {
+    background-image: url(../images/only_bg2.png);
+    background-position: center center; /* 배경 정렬 */
+    background-repeat: no-repeat; /* 반복안함 */
+    background-size: cover; /* 영역에 꽉차게 */
+    background: url(../images/only_bg.png) no-repeat center center / cover;
+    /* 배경에 이미지를 넣을 때 한번에 선언하는 방법 */ 
+    height: 700px;
+    color: rgba(225,255,255,0.8);
+    text-align: center;
+}
+.only h2 {
+    font-size: 50px;
+    font-weight: 700;
+    color: #fff;
+    padding: 200px 0 18px 0;
+}
+.cj .wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+.cj .txt p {
+    width: 544px;
+}
+.cj .txt strong {
+    font-size: 50px;
+    color: #006ecd;
+}
+.cj .txt h2 {
+    font-size: 50px;
+    color: #1d1d1d;
+    margin: 0 0 10px 0;
+}
+.cj .photo img {
+    border-radius: 20px;
+}
+.culture .txt {
+    margin: 210px 0 0 0;
+}
+.global .txt {
+    margin: 160px 0 0 0;
+}
+.culture {
+    margin: 140px 0 160px 0;
+}
