@@ -141,7 +141,7 @@ footer .f_sub {
     margin: 25px 0 0 0; /* 선 밖의 여백 */
     padding: 25px 0 0 0; /* 선 내부 여백 */
 }
-footer .f_sub .f_info span {
+footer .f_sub .f_info sapn {
     margin: 0 40px 10px 0;
     display: inline-block;
 }
