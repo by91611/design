@@ -23,6 +23,9 @@ html, body {
     letter-spacing: 0; /* 자간 */
     word-break: keep-all;
 }
+#wrap { /* 홈페이지 전체를 감싸는 요소 */
+    min-width: 1260px;
+}
 .wrapper {
     width: 1260px;
     margin: 0 auto;
@@ -141,7 +144,7 @@ footer .f_sub {
     margin: 25px 0 0 0; /* 선 밖의 여백 */
     padding: 25px 0 0 0; /* 선 내부 여백 */
 }
-footer .f_sub .f_info sapn {
+footer .f_sub .f_info span {
     margin: 0 40px 10px 0;
     display: inline-block;
 }
