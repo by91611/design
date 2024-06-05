@@ -1,12 +1,19 @@
 @font-face {
-    font-family: 'Pretendard';
+    font-family: 'NanumSquareNeo';
     font-weight: 400;
+    font-style: normal;
+    src: url('../fonts/NanumSquareNeoTTF-bRg.eot?#iefix') format('embedded-opentype'),
+            url('../fonts/NanumSquareNeoTTF-bRg.woff2') format('woff2'),
+            url('../fonts/NanumSquareNeoTTF-bRg.woff') format('woff');
     font-display: swap;
-    src: local('Pretendard Regular'), url(../fonts/Pretendard-Regular.woff2) format('woff2'), url(../fonts/Pretendard-Regular.woff) format('woff');
-}
+} 
+
 @font-face {
-    font-family: 'Pretendard';
-    font-weight: 700;
+    font-family: 'NanumSquareNeo';
+    font-weight: 800;
+    font-style: normal;
+    src: url('../fonts/NanumSquareNeoTTF-dEb.eot?#iefix') format('embedded-opentype'),
+            url('../fonts/NanumSquareNeoTTF-dEb.woff2') format('woff2'),
+            url('../fonts/NanumSquareNeoTTF-dEb.woff') format('woff');
     font-display: swap;
-    src: local('Pretendard Bold'), url(../fonts/Pretendard-Bold.woff2) format('woff2'), url(../fonts/Pretendard-Bold.woff) format('woff');
-}
+} 

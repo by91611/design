@@ -3,6 +3,7 @@
 * { /* 모든 태그를 지칭 - 상속이 안되는 속성을 줄 때 사용 */
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
 li { /* li 앞의 동그라미 삭제 */

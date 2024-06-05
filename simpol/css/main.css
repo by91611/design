@@ -3,9 +3,9 @@
 
 /* 기본글자의 스타일은 모든 태그를 감싸는 html body에 선언 */
 html, body {
-    font-family: 'Pretendard', sans-serif;
+    font-family: 'NanumSquareNeo', sans-serif;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 15px;
     letter-spacing: 0em; /* 자간 */
     line-height: 1.2; /* 행간 */
     color: #3d3d3d; /* 글자 색상 */
@@ -21,245 +21,64 @@ html, body {
     margin: 0 auto;
 }
 
-header {
-    height: 100px;
-}
-
-header .wrapper {
+.community .wrapper {
     display: flex;
     justify-content: space-between;
 }
-header .logo {
+.community .colgroup1 .rowgroup1 {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 24px 0;
+}
+.community .colgroup2 .rowgroup2 {
+    display: flex;
+    justify-content: space-between;
     margin: 24px 0 0 0;
 }
-header .gnb ul {
-    display: flex;
+.community .txt_news {
+    width: 297px;
+    height: 207px;
+    background-color: #f4f4f4;
 }
-header .gnb ul li a {
+.community .txt_news a{
+    height: 207px;
+}
+.community .photo_news {
+    width: 618px;
+    height: 418px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    color: #ffffff;
+}
+.community .photo_news a {
+    height: 418px;
+    display: flex;
+    flex-direction: column; /* 세로 정렬 */
+    justify-content: flex-end; /* 하단 정렬 */
+}
+/* 하나의 요소에 두 개의 이름이 들어간 경우 이름 간에 띄어쓰기 없음 */
+.community .photo_news.bg1 {
+    background-image: url(../images/community1.png);
+}
+.community .photo_news.bg2 {
+    background-image: url(../images/community2.png);
+}
+.community .txt_news.color {
+    background-color: #007443;
+    color: #ffffff;
+}
+.community a {
+    padding: 33px 33px 30px 33px;
+    display: block;
+}
+.community a h2 {
     font-size: 20px;
-    color: #1d1d1d;
-    padding: 42px 25px 34px 25px;
-    display: block; /* a는 inline 태그라 padding 값을 적용하기 위해서 */
+    font-weight: 800;
 }
-header .gnb ul li a:hover { 
-    color: #0F0460;
-    font-weight: 700;
-}
-
-.visual {
-    height: 700px;
-    /* background 속성을 한번에 선언하는 방법 */
-    background: url(../images/visual_bg.png) no-repeat center center / cover;
-    color: #ffffff;
-    text-align: center;
-}
-.visual strong {
-    padding: 272px 0 0 0;
-    display: block; /* inline 요소는 여백 적용 안됨 */
-}
-.visual h2 {
-    font-size: 50px;
-}
-
-.introduce .art {
-    display: flex;
-    justify-content: space-between;
-    margin: 240px 0 100px 0;
-}
-.introduce .scholarship {
-    display: flex;
-    justify-content: space-between;
-    margin: 0 0 240px 0;
-    text-align: right;
-}
-.introduce .art .txt {
-    margin: 0 190px 0 0;
-    width: 343px;
-}
-.introduce .scholarship .txt {
-    margin: 0 0 0 155px;
-    width: 390px;
-}
-.introduce h2 {
-    font-size: 50px;
-    font-weight: 700;
-    color: #1d1d1d;
-    margin: 58px 0 0 0;
-}
-.introduce strong {
-    font-size: 25px;
-    font-weight: 700;
-    margin: 10px 0 10px 0;
-    display: block;
-}
-.introduce .btn {
-    display: flex;
-    /* a태그는 원래 좌우로 배치되지만 사이사이 여백이 발생
-       여백을 삭제하려면 flex로 좌우로 배치 */
-    margin: 30px 0 0 0;
-}
-.introduce .scholarship .btn {
-    justify-content: flex-end; /* text-align의 영향을 받지 않아 오른쪽 정렬 */
-}
-.introduce .btn a {
-    border: 1px solid #666666;
-    padding: 5px 10px; /* 위아래 여백, 좌우 여백 */
-    display: block; /* padding 값을 주기 위함 */
-    margin: 0 10px 0 0;
-}
-.introduce .btn a:last-child {
-    margin-right: 0;
-}
-.introduce .btn a:hover {
-    /* hover 전에 border가 있다면 hover 후에도 border를 줘야 사이즈가 유지됨 */
-    border: 1px solid #0F0460; 
-    background-color: #0F0460;
-    color: #ffffff;
-}
-
-.promotion {
-    /* 배경보다 promtion 콘텐츠 길이가 더 길어서 배경의 위치를 정확하게(가운데 상단)
-       bcakground size 주면 안되고 그러니까 cover 할 필요 없음 */
-    background: url(../images/promotion_bg2.png) no-repeat center top;
-}
-.promotion .news {
-    color: rgba(255,255,255,0.8);
-    padding: 137px 0 146px 0;
-}
-.promotion .news .wrapper {
-    display: flex;
-    justify-content: space-between;
-}
-.promotion .news .tit h2 {
-    font-size: 50px;
-    font-weight: 700;
-    color: #ffffff;
-}
-.promotion .news .list  {
-    width: 725px;
-}
-.promotion .news .list  ul li {
-    border-top: 1px solid rgba(255,255,255,0.5);
-}
-.promotion .news .list  ul li:last-child {
-    border-bottom: 1px solid rgba(255,255,255,0.5);
-}
-.promotion .news .list  ul li a {
-    display: flex; /* disply flex는 해당요소를 block 요소로 만들어서 넓이가 100%가 됨 */
-    justify-content: space-between;
-    align-items: center; /* 위 아래 가운데 */
-    padding: 10px 25px 15px 20px;
-}
-.promotion .news .list  ul li a strong {
-    color: #ffffff;
-}
-.promotion .news .list  ul li a span {
-    font-size: 15px;
-    color: rgba(255,255,255,0.5);
-}
-.promotion .news .list  ul li a:hover strong { /* a 태그에 hover 했을 때 strong 태그는 */
-    font-weight: 700;
-}
-.promotion .news .wrapper{
-    position: relative;
-    /* more정렬의 기준: more를 감싸는 wrapper를 기준으로 정렬 -> wrpper에 position 값을 줘야 함
-    position 속성값 중에서 유일하게 relative 값만이 요소에 아무런 영향을 주지 않음 */
-}
-.promotion .news .more {
-    border: 1px solid rgba(255,255,255,0.5);
-    padding: 4.5px 9px;
-    display: inline-block; /* inline 요소는 padding 적용 안됨 */
-    margin: 25px 0 0 0;
-    position: absolute;
-    left: 0;
-    top: 80px;
-    /* position: absolutesms 반드시 좌우 위치(left right) 위아래 위치(top bottom) 값이 필수이고, 
-    이 값을 어디서부터 계산하는지 기준이 필요 -> 기준은 나를 감싸는 요소 중에서 position 속성을 가진 요소*/
-}
-.promotion .news .more:hover {
-    background-color: rgba(255,255,255,0.8);
-    color: #0F0460;
-}
-.promotion .movie .tit h2 {
-    font-size: 50px;
-    font-weight: 700;
-    color: #ffffff;
-    margin: 0 0 15px 0;
-}
-.promotion .movie .list ul {
-    display: flex;
-    justify-content: space-between;
-}
-.promotion .movie .list ul li {
-    width: 404px;
-}
-.promotion .movie .list ul li a {
-    display: block;
-    /* a는 inline태그, 내부에는 bolock 태그라서 a와 li의 영역 크기를 동일하게 주기 위해 */
-}
-.promotion .movie .list ul li a .photo img {
-    border: 1px solid #1d1d1d;
-    /* 이미지에 테두리를 주면 이미지 밖으로 테두리 형성
-       이미지를 감싸는 영역의 크기를 이미지보다 작게 해도 이미지는 줄어들지 않음(글자는 줄바꿈을 함) */
-    width: calc(100% - 2px) 
-    /* 100%는 나를 감싸는 photo 넓이의 100% -> 테두리는 별개임
-       따라서 넓이 100%에서 테두리값을 뺀 넓이 값을 줘야 함 */
-}
-.promotion .movie .list ul li a h3 {
-    color: #1d1d1d;
-    margin: 15px 0 0 0;
-}
-/* 마우스 hover 시에 스타일이 변경되는 요소의 스타일이 정의된 선택자를 그대로 복사해야 함
-   상속 받은 경우에는 그냥 a에게 주면 됨 */
-.promotion .movie .list ul li a:hover h3 {
-    font-weight: 700;
-    color: #0F0460;
-}
-
-footer {
-    margin: 186px 0 0 0;
-    padding: 55px 0 100px 0;
-    background-color: #1d1d1d;
-    color: rgba(255,255,255,0.8);
-}
-footer .f_nav ul {
+.community a .name {
     display: flex;
 }
-footer .f_nav ul li {
-    margin: 0 40px 0 0;
-}
-footer .f_nav ul li.privacy {
-    font-weight: 700;
-}
-footer .f_info {
-    margin: 47px 0 44px 0;
-}
-/* footer .f_info address, sapn -> html 내부의 모든 span */
-footer .f_info address,
-footer .f_info span {
-    margin: 0 38px 10px 0;
-    display: inline-block;
-    /* adress는 qmffjrxormdlsep span 태그와 좌우에 배치되려고하고, span은 margin을 적용시키려고 함 */ 
-}
-footer .copyright {
-    color: rgba(255,255,255,0.5);
-}
-footer .wrapper {
-    position: relative; /* footer .family의 기준 */
-}
-footer .family {
-    position: absolute; 
-    right: 0;
-    top: 0;
-    /* footer의 wrapper를 기준으로 정렬 */
-}
-footer .family button {
-    border: 1px solid rgba(255,255,255,0.8);
-    width: 180px;
-    height: 30px;
-    /* button 태그는 요소가 좌우 위아래 가운데 정렬 */
-    display: flex;
-    justify-content: space-between; /* 내부의 두 요소를 좌우 끝단에 배치하기 위해 */
-    align-items: center; /* 위아래 가운데 */
-    padding: 0 15px;
+.community a .name span:first-child {
+    margin: 0 35px 0 0;
 }
