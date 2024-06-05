@@ -27,3 +27,12 @@ img { /* img태그를 a태그로 감싸면 일부 브라우저에서 파란색 �
 em, address { /* 글자의 기울임 삭제 */
     font-style: normal;
 }
+
+button { /* 버튼태그는 글자의 스타일을 상속받지 않음 */
+    background-color: transparent; /* 투명 */
+    border: 0; /* 테두리 삭제 */
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: inherit;
+    color: inherit;
+}
