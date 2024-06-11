@@ -374,7 +374,7 @@ footer .f_nav ul {
     gap: 45px; /* li사이의 여백 */
 }
 footer .f_nav ul li.privacy a {
-    font-weight: 700;
+    color: #1d1d1d;
 }
 footer .f_info {
     margin: 30px 0 13px 0;
