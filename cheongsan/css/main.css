@@ -373,8 +373,24 @@ footer .f_nav ul {
     display: flex;
     gap: 45px; /* li사이의 여백 */
 }
+footer .f_nav ul li {
+    position: relative; /* after의 정렬의 기준 */
+}
+footer .f_nav ul li::after {
+    content: ""; /* 가상요소 before와 after를 사용할 때는 반드시 content 필요 */
+    width: 1px;
+    height: 12px;
+    background-color: #cccccc;
+    display: block;
+    position: absolute; /* 각각의 li를 기준으로 정렬 */
+    right: -24px;
+    top: 5px;
+}
+footer .f_nav ul li:last-child::after {
+    display: none;
+}
 footer .f_nav ul li.privacy a {
-    color: #1d1d1d;
+    color: #0d0d0d;
 }
 footer .f_info {
     margin: 30px 0 13px 0;
