@@ -1,0 +1,33 @@
+@import url(default.css);
+@import url(fonts.css);
+@import url(common.css);
+
+.sound {
+    background: url(../images/sound_bg.png) no-repeat center center / cover;
+    color: #fff;
+    text-align: center;
+    height: 500px;
+}
+.sound h2 {
+    font-size: 50px;
+    font-weight: 900;
+    line-height: 1.1;
+    padding: 140px 0 10px 0;
+}
+.sound p {
+    margin: 0 405px; /* 글자 좌우에 여백을 줘면 글자가 들어갈 공간이 좁아서 2줄이 되도록 함*/
+}
+@media screen and (max-width:640px){
+    .sound {
+        height: auto; /* 설정해준 높이 해제 - 콘텐츠 길이에 맞춰 늘어남 */
+        padding: 0 0 130px 0;
+    }
+    .sound h2 {
+        font-size: 25px;
+        line-height: 1.1;
+        padding: 110px 0 5px 0;
+    }
+    .sound p {
+        margin: 0; /* pc버전에서 준 여백을 삭제하려면 여백을 0 주면 됨 */ 
+    }
+} /* media */
