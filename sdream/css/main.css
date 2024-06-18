@@ -50,7 +50,7 @@ header .gnb .gnb_wrap ul li a {
 header .gnb .gnb_wrap ul li a::after {
     position: absolute; /* a를 기준으로 정렬*/
     right: 0;
-    top: 50px;
+    top: 48px;
     width: 4px;
     height: 4px;
     border-radius: 50%; /* 동그라미 */
