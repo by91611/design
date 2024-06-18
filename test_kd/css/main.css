@@ -1,0 +1,65 @@
+@import url(default.css);
+@import url(fonts.css);
+@import url(common.css);
+
+
+.biz h2 {
+    font-size: 45px;
+    font-weight: 700;
+    letter-spacing: -0.06em;
+    padding: 85px 0 20px 0;
+    text-align: center;
+    color: #1d1d1d;
+}
+.biz ul {
+    display: flex;
+    justify-content: space-between;
+}
+.biz ul li {
+    width: 297px;
+}
+.biz ul li .photo {
+    font-size: 0;
+    line-height: 0;
+}
+.biz ul li h3 {
+    font-size: 25px;
+    font-weight: 700;
+    color: #1d1d1d;
+    margin: 13px 0 7px 0;
+}
+
+.tech {
+    background-color: #f4f4f4;
+    margin: 87px 0 0 0;  
+    text-align: center; 
+    padding: 80px 0;
+}
+.tech h2 {
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: -0.06em;
+    margin: 0 0 20px 0;
+    color: #1d1d1d;
+}
+.tech ul {
+    display: flex;
+    justify-content: space-between;
+}
+.tech ul li {
+    width: 618px;
+    height: 514px;
+    color: #ffffff;
+}
+.tech ul li:nth-child(1) {
+    background-image: url(../images/tech01.png);
+}
+.tech ul li:nth-child(2) {
+    background-image: url(../images/tech02.png);
+}
+.tech ul li h3 {
+    font-size: 35px;
+    font-weight: 700;
+    margin: 196px 0 12px 0;
+}
