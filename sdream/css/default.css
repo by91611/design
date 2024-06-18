@@ -36,4 +36,5 @@ button { /* 버튼태그는 글자의 스타일을 상속받지 않음 */
     font-family: inherit;
     font-weight: inherit;
     color: inherit;
+    cursor: pointer; /* 마우스 포인터를 손바닥으로 변경 */
 }
