@@ -67,16 +67,16 @@ $(document).ready(function(){
         정지버튼을 클릭하면 visual_swiper가 멈춤
         재생버튼을 클릭하면 visual_swiper가 autoplay
     */ 
-    $(".visual .stop").hide()
+    $(".visual .play").hide()
     $(".visual .stop").on("click", function(){
         visual_swiper.autoplay.stop();  /* 일시정지 기능 */
         $(".visual .stop").hide()
-        $(".visual .stop").show()
+        $(".visual .play").show()
     });
     $(".visual .stop").on("click", function(){
         visual_swiper.autoplay.start();  /* 재생 기능 */	
         $(".visual .stop").show()
-        $(".visual .stop").hide()
+        $(".visual .play").hide()
     });
 
 }) //$(document).ready//

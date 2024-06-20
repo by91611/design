@@ -316,7 +316,7 @@
         display: none;
     }
     .visual .btn_wrap {
-        bottom: 25px;
+        bottom: 20px;
     }
     .visual .btn_wrap .paging .swiper-pagination-bullet { /* paging기본 스타일 */
         width: 10px;
