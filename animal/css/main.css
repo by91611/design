@@ -1,0 +1,14 @@
+@import url(default.css);
+@import url(fonts.css);
+@import url(common.css);
+
+
+h1 {
+    font-family: 'KBO-Dia-Gothic';
+    font-weight: 700;
+}
+
+p {
+    font-family: 'KBO-Dia-Gothic';
+    font-weight: 300;
+}
