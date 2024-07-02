@@ -48,7 +48,7 @@ header .logo a::before {
         position: relative; /* 2차 메뉴 정렬의 중심 */
     }
     header .gnb .gnb_wrap ul.depth1 > li > a {
-        padding: 0 25px;
+        padding: 0 20px;
         line-height: 100px; /* header의 높이와 동일하게 행간을 줌 -> 위아래 가운데 글자가 위치하게 됨 (하위메뉴와 정확한 위치 조정을 하기 위함) */
         display: block;
         font-family: 'KBO-Dia-Gothic';
@@ -60,7 +60,7 @@ header .logo a::before {
        브라우저 높은 버전만 지원 - 하위 브라우저에서는 구현되지 않음 -- 기능상의 문제는 없음 */
     header .gnb .gnb_wrap ul.depth1 > li:has(.depth2) > a::after {
         position: absolute;
-        right: 0;
+        right: 5px;
         top: 47px;
         width: 11px;
         height: 6px;
@@ -108,11 +108,6 @@ header .logo a::before {
     }
     header .gnb .gnb_wrap ul.depth1 > li.on > ul.depth2 {
         display: block;
-    }
-}
-@media screen and (min-width:1025px) and (max-width:1300px){ /* 1300px ~ 1025px */
-    header .gnb .gnb_wrap ul.depth1 > li > a {
-        padding: 0 15px;
     }
 }
 header .tnb {
@@ -446,6 +441,227 @@ header.menu_over::before {
         margin: 200px 0 0 0;
     }
 }
+
+.find {
+    background-color: #013C57;
+    color: #fff;
+    padding: 150px 0;
+}
+.find h2 {
+    font-family: 'KBO-Dia-Gothic';
+    font-weight: 500;
+    font-size: 50px;
+    text-align: center;
+    margin: 0 0 30px 0;
+}
+.find .tab > ul > li .tab_menu {
+    font-family: 'KBO-Dia-Gothic';
+    font-weight: 500;
+    font-size: 20px;
+    padding: 15px 30px;
+}
+.find .tab > ul > li.find1.on .tab_menu{
+    background-color: #F4A258;
+    border-radius: 50px;
+}
+.find .tab > ul > li.find2.on .tab_menu{
+    background-color: #718C69;
+    border-radius: 50px;
+}
+.find .tab .tab_detail ul li {
+    width: 297px;
+}
+@media screen and (max-width:768px){
+    .find .tab .tab_detail ul li {
+        width: 197px;
+    }
+}
+.find .tab .tab_detail ul li a {
+    display: block;
+}
+.find .tab .tab_detail ul li a .photo {
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+    border-radius: 30px;
+}
+.find .tab .tab_detail ul li a .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.find .tab .tab_detail ul li a .tit {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0 10px 0;
+    font-family: 'KBO-Dia-Gothic';
+    font-weight: 500;
+    font-size: 20px;
+}
+.find .tab .tab_detail ul li a .tit strong {
+    /* 옆에 h3 태그의 정확한 넓이를 주기 위해 strong태그의 넓이가 특정되어야 함 */
+    width: 3.35em; /* 넓이(72px) / 글자크기(20px) = 3.35em (글자크기 하나가 1em) */
+    height: 2em;
+    line-height: 2em;
+    text-align: center;
+    border-radius: 1em;
+    white-space: nowrap;
+    /* 넓이가 줄어들면 h3태그의 글자만 짤림 */
+}
+.find .tab .tab_detail ul li a .tit strong.cate1 {
+    background-color: #F4A258;
+}
+.find .tab .tab_detail ul li a .tit strong.cate2 {
+    background-color: #8A8A8A;
+}
+.find .tab .tab_detail ul li a .tit strong.cate3 {
+    background-color: #718C69;
+}
+.find .tab .tab_detail ul li a .tit strong.cate4 {
+    background-color: #5AB49B;
+}
+.find .tab .tab_detail ul li a .tit h3 {
+    width: calc(100% - 3.85em);
+    /* 1줄 제한 */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.find .tab .tab_detail ul li a p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* <br> 태그를 이용했다면 1줄씩 계산됨 */
+}
+@media screen and (max-width:768px){
+    .find {
+        padding: 50px 0;
+    }
+    .find h2 {
+        font-size: 25px;
+        margin: 0 0 20px 0;
+    }
+    .find .tab > ul > li .tab_menu {
+        font-size: 15px;
+        padding: 5px 10px;
+    }
+    .find .tab .tab_detail ul li a .tit {
+        margin: 10px 0 5px 0;
+        font-size: 13px;
+    }
+}
+.find .tab .tab_detail .btn_wrap {
+    margin: 50px 0 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.find .tab .tab_detail .btn_wrap button {
+    width: 30px;
+    height: 30px;
+    font-size: 0;
+    line-height: 30px;
+    margin: 0 10px 0 0;
+    position: relative; /* before 정렬의 기준 */
+}
+.find .tab .tab_detail .btn_wrap button::before {
+    position: absolute; /* button을 기준으로 정렬 */
+    left: 0;
+    top: 0;
+    /* left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); /* 정렬의 기준이 되는 영역의 위아래 가운데, 좌우 가운데 */
+    width: 30px;
+    height: 30px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: "";
+}
+.find .tab .tab_detail .btn_wrap button.prev::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3E%3Cpath id='arrow_circle_left_24dp_FILL0_wght300_GRAD0_opsz24' d='M115-839.246l1.649-1.648-2.921-2.921h7.193v-2.368h-7.193l2.921-2.922L115-850.754,109.246-845ZM115-830a14.617,14.617,0,0,1-5.85-1.181,15.164,15.164,0,0,1-4.764-3.205,15.164,15.164,0,0,1-3.207-4.762A14.6,14.6,0,0,1,100-845a14.619,14.619,0,0,1,1.181-5.85,15.161,15.161,0,0,1,3.206-4.764,15.128,15.128,0,0,1,4.762-3.206A14.576,14.576,0,0,1,115-860a14.6,14.6,0,0,1,5.85,1.182,15.151,15.151,0,0,1,4.764,3.206,15.129,15.129,0,0,1,3.207,4.762A14.589,14.589,0,0,1,130-845a14.616,14.616,0,0,1-1.181,5.851,15.147,15.147,0,0,1-3.206,4.763,15.132,15.132,0,0,1-4.762,3.208A14.608,14.608,0,0,1,115-830Zm0-2.368a12.191,12.191,0,0,0,8.96-3.671A12.191,12.191,0,0,0,127.632-845a12.189,12.189,0,0,0-3.671-8.96,12.192,12.192,0,0,0-8.96-3.672,12.192,12.192,0,0,0-8.96,3.672,12.189,12.189,0,0,0-3.671,8.96,12.191,12.191,0,0,0,3.671,8.961A12.191,12.191,0,0,0,115-832.368ZM115-845Z' transform='translate(-100 860)' fill='%23fff' opacity='0.8'/%3E%3C/svg%3E%0A");
+}
+.find .tab .tab_detail .btn_wrap button.next::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3E%3Cpath id='arrow_circle_right_24dp_FILL0_wght300_GRAD0_opsz24' d='M115-839.246,120.754-845,115-850.754l-1.649,1.648,2.921,2.922h-7.193v2.368h7.193l-2.921,2.921ZM115-830a14.617,14.617,0,0,1-5.85-1.181,15.164,15.164,0,0,1-4.764-3.205,15.167,15.167,0,0,1-3.207-4.762A14.6,14.6,0,0,1,100-845a14.619,14.619,0,0,1,1.181-5.85,15.16,15.16,0,0,1,3.206-4.764,15.128,15.128,0,0,1,4.762-3.206A14.576,14.576,0,0,1,115-860a14.6,14.6,0,0,1,5.85,1.182,15.119,15.119,0,0,1,4.764,3.206,15.135,15.135,0,0,1,3.207,4.762A14.593,14.593,0,0,1,130-845a14.61,14.61,0,0,1-1.181,5.85,15.134,15.134,0,0,1-3.206,4.764,15.149,15.149,0,0,1-4.762,3.208A14.609,14.609,0,0,1,115-830Zm0-2.368a12.191,12.191,0,0,0,8.96-3.671A12.192,12.192,0,0,0,127.632-845a12.19,12.19,0,0,0-3.671-8.96,12.192,12.192,0,0,0-8.96-3.672,12.193,12.193,0,0,0-8.961,3.672,12.19,12.19,0,0,0-3.671,8.96,12.192,12.192,0,0,0,3.671,8.961A12.192,12.192,0,0,0,115-832.368ZM115-845Z' transform='translate(-100 860)' fill='%23fff' opacity='0.8'/%3E%3C/svg%3E%0A");
+}
+.find .tab .tab_detail .btn_wrap .more {
+    font-size: 13px;
+    width: 90px;
+    height: 30px;
+    color: #fff;
+    line-height: 25px; /* 왼쪽 좌우 버튼이랑 높이를 동일하게 코딩하기 위해 */
+    border: 2px solid #fff;
+    border-radius: 15px;
+    padding: 0 0 0 13px;
+    position: relative;
+}
+.find .tab .tab_detail .btn_wrap .more::after {
+    position: absolute;
+    right: 10px;
+    top: 8px;
+    width: 9px;
+    height: 9px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='9.667' height='9.409' viewBox='0 0 9.667 9.409'%3E%3Cpath id='add_24dp_FILL0_wght300_GRAD0_opsz24' d='M224.276-734.753H220v-1.086h4.276V-740h1.115v4.162h4.276v1.086h-4.276v4.162h-1.115Z' transform='translate(-220 740)' fill='%23fff' opacity='0.8'/%3E%3C/svg%3E%0A");
+    content: "";
+}
+/* tab메뉴 구현: 하나의 li에만 on 클래스 추가 */
+.find .tab {
+    position: relative; /* tab_menu 정렬의 중심*/
+}
+.find .tab > ul > li > .tab_menu {
+    position: absolute; /* tab을 기준으로 정렬 */
+    top: 0;
+}
+.find .tab > ul > li.find1 > .tab_menu {
+    right: 50%;
+}
+.find .tab > ul > li.find2 > .tab_menu {
+    left: 50%;
+}
+.find .tab > ul > li > .tab_detail {
+    display: none;
+    padding: 110px 0 0 0;
+}
+.find .tab > ul > li.on > .tab_detail {
+    display: block;
+}
+
+
+
+
+@media screen and (max-width:768px){
+    .find .tab .tab_detail .btn_wrap {
+        margin: 25px 0 0 0;
+    }
+    .find .tab .tab_detail .btn_wrap button {
+        display: none;
+    }
+    .find .tab .tab_detail .btn_wrap .more {
+        font-size: 13px;
+        width: 90px;
+        height: 30px;
+        line-height: 30px;
+        border-radius: 15px;
+        border: 1px solid #fff;
+    }
+    .find .tab .tab_detail .btn_wrap .more::after {
+        right: 12px;
+        top: 10px;
+        width: 8px;
+        height: 8px;
+    }
+    .find .tab > ul > li > .tab_detail {
+        padding: 45px 0 0 0;
+    }
+}
+
+
+
+
 
 footer {
     margin-top: 1000px;

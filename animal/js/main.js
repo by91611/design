@@ -104,8 +104,47 @@ $(document).ready(function(){
         }//if
     })
 
+    /* find swiper */ 
+    const find1_swiper = new Swiper('.find .tab .find1 .swiper', { /* 팝업을 감싼는 요소의 class명 */
+        slidesPerView: 'auto', /* 한번에 보일 팝업의 수 - 모바일 제일 작은 사이즈일때 */
+        spaceBetween: 16, /* 팝업과 팝업 사이 여백 */
+        breakpoints: {
+            768: {    /* 768px 이상일때 적용 */
+                slidesPerView: 'auto',
+                spaceBetween: 24,
+            },
+        },
+        loop: true,  /* 마지막 팝업에서 첫번째 팝업으로 자연스럽게 넘기기 */
+        navigation: {
+            nextEl: '.find .tab .find1 .btn_wrap .next',
+            prevEl: '.find .tab .find1 .btn_wrap .prev',
+        },
+    }); //find1_swiper
+
+    const find2_swiper = new Swiper('.find .tab .find2 .swiper', { /* 팝업을 감싼는 요소의 class명 */
+        slidesPerView: 'auto', /* 한번에 보일 팝업의 수 - 모바일 제일 작은 사이즈일때 */
+        spaceBetween: 16, /* 팝업과 팝업 사이 여백 */
+        breakpoints: {
+            768: {    /* 768px 이상일때 적용 */
+                slidesPerView: 'auto',
+                spaceBetween: 24,
+            },
+        },
+        loop: true,  /* 마지막 팝업에서 첫번째 팝업으로 자연스럽게 넘기기 */
+        navigation: {
+            nextEl: '.find .tab .find2 .btn_wrap .next',
+            prevEl: '.find .tab .find2 .btn_wrap .prev',
+        },
+    }); //find2_swiper
 
 
+    /* .find .tab > ul > li 클릭하면 클릭한 li에만 on클래스 추가
+        1. 기본적으로 하나의 li에 on클래스가 있어야 함
+        2. 클릭하면 on을 다른 li에 줌 */
+    $('.find .tab > ul > li ').on('click', function(){
+        $('.find .tab > ul > li ').removeClass('on') /* 모든 li에 있는 on 클래스 삭제 */
+        $(this).addClass('on') /* click한 li(this)에만 on 클래스 추가 */
+    })
 
 }) //document
 
