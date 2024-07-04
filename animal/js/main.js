@@ -165,5 +165,16 @@ $(document).ready(function(){
         },
     }); //swiper
 
+    /* 
+    footer .family_site button.open 클릭 -  family_site에 open 클래스 추가
+    footer .family_site button.close 클릭 -  family_site에 open 클래스 삭제 */ 
+
+    $('footer .family_site button.open').on('click', function(){
+        $('footer .family_site').addClass('open')
+    })
+    $('footer .family_site button.close').on('click', function(){
+        $('footer .family_site').removeClass('open')
+    })
+
 }) //document
 
