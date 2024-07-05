@@ -1,0 +1,137 @@
+@import url(default.css);
+@import url(fonts.css);
+@import url(common.css);
+
+header {
+    position: absolute;
+    left: 0;
+    height: 0;
+    width: 100%;
+    height: 100px;
+    border-bottom: 1px solid rgba(204, 204, 204, 0.8);
+}
+header .inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 20px;
+}
+header .logo a {
+    width: 200px;
+    height: 60px;
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    position: relative; /* beofre 정렬의 기준 */
+}
+header .logo a::before {
+    position: absolute; /* a를 기준으로 정렬 */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../images/logo.png) no-repeat center center / contain;
+    content: "";
+}
+
+header.menu_over::before {
+    position: absolute; /* header를 기준으로 정렬 */
+    left: 0;
+    top: 0;
+    /* z-index: -1; */ /* 정렬의 기준(header)의 모든 내부 요소(position이 없는 요소까지 포함)보다 아래에 배치 */
+    width: 100%;
+    height: 270px;
+    background-color: #fff;
+    content: "";
+}
+header.menu_over::after {
+    position: absolute;
+    left: 0;
+    top: 100px;
+    width: 100%;
+    height: 1px;
+    background-color: rgba(204, 204, 204, 0.8);
+    content: "";
+}
+header.menu_over .logo a::before {
+
+}
+
+/* ~ 1025: header 높이 100, 모든 메뉴가 나타남
+    1300~769: header 높이 100, 모바일 메뉴
+    768이하: header 높이 50, 모바일 메뉴 */
+@media screen and (min-width:1025px){ /* 1300이상일 때 */
+    header .gnb button {
+        display: none;
+    }
+    header .gnb .gnb_wrap ul.depth1 {
+        display: flex;
+    }
+    header .gnb .gnb_wrap ul.depth1 > li {
+        width: 166px;
+        text-align: center;
+        position: relative; /* ul.depth2 정렬의 기준 */
+    }
+    header .gnb .gnb_wrap ul.depth1 > li > a {
+        line-height: 100px; /* header 높이와 동일 */
+        display: block; /* li의 높이와 동일 */
+        font-size: 20px;
+        font-weight: 700;
+        color: #3d3d3d;
+    }
+    header .gnb .gnb_wrap ul.depth1 > li.on > a {
+        color: #004289;
+    }
+    header .gnb .gnb_wrap ul.depth1 > li.on > a span {
+        position: relative; /* span::after 정렬의 기준 */
+    }
+    header .gnb .gnb_wrap ul.depth1 > li.on > a span::after {
+        position: absolute;
+        left: 0;
+        bottom: -41px;
+        z-index: 10;
+        width: 100%;
+        height: 3px;
+        background-color: #004289;
+        content: "";
+    }
+    header .gnb .gnb_wrap ul.depth2 {
+        display: none; /* 마우스 오버시에만 보임 */
+        position: absolute; /* 2차 메뉴는 1차 메뉴 하단에 header 밖에 배치되기 때문 */
+        left: 0;
+        top: 100px; /* 1차 메뉴 a의 높이만큼 */
+        width: 100%; /* li와 넓이 동일 */
+        padding: 15px 0 0 0;
+    }
+    header.menu_over .gnb .gnb_wrap ul.depth2 > li > a {
+        display: block; /* depth2 1차 메뉴 a와 넓이가 같음 */
+        line-height: 2;
+    }
+    header.menu_over .gnb .gnb_wrap ul.depth2 > li > a:hover {
+        color: #009FE3;
+    }
+    header.menu_over .gnb .gnb_wrap ul.depth2 {
+        display: block;
+    }
+}
+/* 상단 메뉴의 글자 크기와 넓이 변경 */
+@media screen and (min-width:1025px) and (max-width:1300px) { /* 1300 ~ 1025 */
+    header .gnb .gnb_wrap ul.depth1 > li {
+        width: 146px;
+    }
+    header .gnb .gnb_wrap ul.depth1 > li > a {
+        font-size: 18px;
+    }
+    
+}
+
+
+
+.visual {
+    background: url(../images/visual_bg.png) no-repeat center center / cover;
+    height: 100vh;
+    margin-bottom: 100vh;
+}
+.visual h2 {
+    display: none;
+}
