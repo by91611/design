@@ -2,7 +2,6 @@
 @import url(fonts.css);
 @import url(common.css);
 
-
 header {
     position: absolute;
     left: 0;
@@ -166,6 +165,8 @@ header .logo a::before {
     }
     header .gnb .gnb_wrap ul.depth1 {
         margin-top: 100px; /* header의 높이 만큼 */
+        height: calc(100vh - 100px); /* 브라우저 높이에 상단 여백값을 뺀 값 */
+        overflow-y: auto; /* ul내부의 li의 길이가 지정한 높이보다 짧으면 스크롤바 생성 */
     }
     header .gnb .gnb_wrap ul.depth1 > li > a {
         display: block;
@@ -196,7 +197,7 @@ header .logo a::before {
     header .gnb .gnb_wrap ul.depth1 > li.open ul.depth2 {
         display: block;
     }
-    header .gnb .gnb_wrap ul.depth1 > li.open a {
+    header .gnb .gnb_wrap ul.depth1 > li.open > a {
         color: #004289;
     }
     header .gnb .gnb_wrap ul.depth1 > li.open a::after {
@@ -207,13 +208,13 @@ header .logo a::before {
         line-height: 1.8;
     }
     /* 메뉴가 열렸을 때 */
-    header.menu_opne .gnb button.gnb_open {
+    header.menu_open .gnb button.gnb_open {
         display: none;
     }
-    header.menu_opne .gnb button.gnb_close {
+    header.menu_open .gnb button.gnb_close {
         display: block;
     }
-    header.menu_opne .gnb .gnb_wrap {
+    header.menu_open .gnb .gnb_wrap {
         display: block;
     }
 }
@@ -239,6 +240,7 @@ header .logo a::before {
     }
     header .gnb .gnb_wrap ul.depth1 {
         margin-top: 50px; /* header의 높이 만큼 */
+        height: calc(100vh - 50px);
     }
     header .gnb button.gnb_open::before {
         width: 24px;

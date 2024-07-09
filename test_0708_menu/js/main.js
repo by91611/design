@@ -40,4 +40,26 @@ $(document).ready(function(){
             $('header .gnb .gnb_wrap ul.depth1 > li').removeClass('on')
         }
     })
+
+    /* 모바일에서 1차 메뉴를 클릭하면 
+       1. 1차 메뉴에 걸려있는 링크가 작동되면 안됨
+       2. 하위메뉴가 열려야 함(li에 open 클래스 추가) 
+       3. 닫힌 1차 메뉴를 클릭하면 열리고, 열린 1차메뉴를 클릭하면 닫힘 
+          (동시에 여러개의 1차 메뉴가 열릴 수 있음) */ 
+    $("header .gnb .gnb_wrap ul.depth1 > li > a").on("click", function(e){
+        if(pc_mobile == 'mobile'){
+            e.preventDefault();		/* a 태그의 href를 작동 시키지 않음 */
+            $(this).parent().toggleClass('open')
+        }
+	});
+    /* header .gnb button.gnb_open 
+       header .gnb button.gnb_close */ 
+    $('header .gnb button.gnb_open').on('click', function(){
+        $('header').addClass('menu_open')
+        $("html, body").css({overflow : "hidden", height : $(window).height()}).bind("scroll touchmove mousewheel", function(e){e.preventDefault();e.stopPropagation();return false;},function(){passive:false});
+    })
+    $('header .gnb button.gnb_close').on('click', function(){
+        $('header').removeClass('menu_open')
+        $("html, body").css({overflow : "visible", height : "auto"}).unbind('scroll touchmove mousewheel');
+    })
 })
