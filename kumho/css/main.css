@@ -1,6 +1,7 @@
 @import url(default.css);
 @import url(fonts.css);
 @import url(common.css);
+@import url(layout.css);
 
 .visual h2 {
     display: none;
@@ -11,7 +12,7 @@
     background-size: cover;
     height: 100vh; /* 브라우저 높이만큼 */
     min-height: 400px;
-    color: #fff;
+    color: rgba(255, 255, 255, 0.8);
     text-align: center;
 }
 .visual ul li.bg1 {
@@ -30,4 +31,114 @@
     font-size: 50px;
     font-weight: 700;
     margin: 40vh 0 0 0;
+}
+.visual .btn_wrap {
+    position: absolute;
+    left: 50%; /* swiper를 기준으로 가운데 정렬 */
+    bottom: 15%;
+    transform: translate(-50%, 0); /* btn_wrap 넓이의 절반을 왼쪽으로 이동 -> 가운데 정렬 */
+    z-index: 10;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+.visual .btn_wrap .paging {
+    width: auto; /* swiper가 준 width:100% 속성 삭제 */
+    display: flex;
+    margin-right: 30px;
+}
+.visual .btn_wrap .paging .swiper-pagination-bullet { /* 현재 선택되지 않은 블릿 */
+    width: 257px;
+    height: 3px;
+    border-radius: 0;
+    background-color: rgba(217, 217, 217, 0.3);
+    opacity: 1;
+    position: relative;
+}
+.visual .btn_wrap .paging .swiper-pagination-bullet-active::before { /* 현재 선택된 블릿 */
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background-color: #D9D9D9;
+    content: "";
+    animation-name: visual_count;
+    animation-duration: 2.5s; /* 5초 동안 */
+    animation-iteration-count: 1; /* 한번만 실행 */
+    animation-fill-mode: forwards; /* 애니메이션 종료 후 마지막 상태 유지 - 애니메이션 반복 횟수가 제한되었을 때 */
+    animation-timing-function: linear;
+}
+@keyframes visual_count {
+    0% {width: 0;}
+    100% {width: 100%;}
+}
+.visual .btn_wrap button {
+    width: 16px;
+    height: 16px;
+    font-size: 0;
+    line-height: 0;
+    position: relative;
+    margin-left: 5px;
+}
+.visual .btn_wrap button.btn_stop,
+.visual .btn_wrap button.btn_play {
+    width: 20px;
+    height: 20px;
+}
+.visual .btn_wrap button::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.visual .btn_wrap button.btn_prev::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_16_457' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='18' height='18'%3E%3Crect width='18' height='18' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_16_457)'%3E%3Cpath d='M7.5 16.5L0 9L7.5 1.5L8.83125 2.83125L2.6625 9L8.83125 15.1687L7.5 16.5Z' fill='white' fill-opacity='0.6'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+.visual .btn_wrap button.btn_next::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_16_460' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='18' height='18'%3E%3Crect width='18' height='18' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_16_460)'%3E%3Cpath d='M6.01875 16.5L4.6875 15.1687L10.8563 9L4.6875 2.83125L6.01875 1.5L13.5188 9L6.01875 16.5Z' fill='white' fill-opacity='0.6'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+.visual .btn_wrap button.btn_stop::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_16_454' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='20' height='20'%3E%3Crect width='20' height='20' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_16_454)'%3E%3Cpath d='M10.8332 15.8334V4.16669H15.8332V15.8334H10.8332ZM4.1665 15.8334V4.16669H9.1665V15.8334H4.1665ZM12.4998 14.1667H14.1665V5.83335H12.4998V14.1667ZM5.83317 14.1667H7.49984V5.83335H5.83317V14.1667Z' fill='white' fill-opacity='0.6'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+.visual .btn_wrap button.btn_play::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='21' height='21' viewBox='0 0 21 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_16_451' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='21' height='21'%3E%3Crect x='19.9956' y='20.4224' width='20' height='20' transform='rotate(-178.777 19.9956 20.4224)' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_16_451)'%3E%3Cpath d='M7.00345 4.30807L16.0435 10.3358L6.75437 15.9721L7.00345 4.30807ZM8.6048 7.38462L8.48559 12.9667L12.9192 10.2691L8.6048 7.38462Z' fill='white' fill-opacity='0.6'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+.visual .btn_wrap button.btn_play { 
+    display: none; /* play 중에는 일시정지 버튼만 나옴 */
+}
+@media screen and (max-width:1300px){
+
+}
+@media screen and (max-width:1024x){
+
+}
+@media screen and (max-width:768px){ /* 모바일 */
+    .visual ul li {
+        height: 450px; /* 브라우저 높이만큼 */
+        min-height: 400px;
+    }
+    .visual ul li br {
+        display: block;
+    }
+    .visual ul li h3 {
+        font-size: 25px;
+        font-weight: 500;
+        letter-spacing: -0.02em;
+        margin: 196px 0 0 0;
+    }
+    .visual .btn_wrap button {
+        display: none;
+    }
+    .visual .btn_wrap .paging {
+        margin-right: 0;
+    }
+    .visual .btn_wrap .paging .swiper-pagination-bullet { /* 현재 선택되지 않은 블릿 */
+        width: 90px;
+        height: 1px;
+    }
 }
