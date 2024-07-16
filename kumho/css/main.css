@@ -31,6 +31,7 @@
     font-size: 50px;
     font-weight: 700;
     margin: 40vh 0 0 0;
+    padding: 0 20px;
 }
 .visual .btn_wrap {
     position: absolute;
@@ -110,12 +111,6 @@
 }
 .visual .btn_wrap button.btn_play { 
     display: none; /* play 중에는 일시정지 버튼만 나옴 */
-}
-@media screen and (max-width:1300px){
-
-}
-@media screen and (max-width:1024x){
-
 }
 @media screen and (max-width:768px){ /* 모바일 */
     .visual ul li {
