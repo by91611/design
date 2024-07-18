@@ -122,7 +122,6 @@
     }
     .visual ul li h3 {
         font-size: 25px;
-        font-weight: 500;
         letter-spacing: -0.02em;
         margin: 196px 0 0 0;
     }
@@ -136,4 +135,257 @@
         width: 90px;
         height: 1px;
     }
+}
+
+section .tit h2 {
+    font-size: 25px;
+    color: #FF0000;
+    margin: 120px 0 10px 0;
+    position: relative;
+}
+section .tit h2 span::after {
+    position: absolute;
+    left: 165px;
+    top: -5px;
+    width: 10px;
+    height: 10px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 7.94658C0 8.22303 0.0402151 8.50953 0.150823 8.78095C0.638506 9.98726 1.88034 10.7312 3.45902 10.1029C3.83609 9.95208 14.2785 5.74506 14.2785 5.74506C14.2785 5.74506 10.1659 16.1696 10.01 16.5566C9.41176 18.0495 10.1307 19.4015 11.3524 19.8539C11.6239 19.9544 11.9055 20.0047 12.182 19.9997C13.1825 19.9946 14.0623 19.4066 14.4947 18.2304C14.5601 18.0545 19.7034 3.93559 19.814 3.59883C19.8793 3.39778 20 2.92531 20 2.5986C20 1.89994 19.7436 1.2415 19.2459 0.743893C18.7582 0.251315 18.1046 0 17.4158 0C17.0789 0 16.8074 0.0603156 16.3952 0.190999C16.1488 0.27142 2.8909 5.20222 1.75968 5.62443C0.628457 6.04664 -2.76166e-06 6.95138 0.00502489 7.94658' fill='%23ED1C24'/%3E%3C/svg%3E%0A");
+    content: "";
+}
+section .tit p {
+    font-size: 35px;
+    font-weight: 700;
+    color: #1d1d1d;
+    margin: 0 0 50px 0;
+}
+
+@media screen and (max-width:768px) {
+    section .tit h2 {
+        font-size: 15px;
+        margin: 50px 0 5px 0;
+    }
+    section .tit p {
+        font-size: 20px;
+        margin: 0 0 20px 0;
+    }
+    section .tit h2::after {
+        left: 100px;
+        top: -5px;
+        width: 7px;
+        height: 7px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+        background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 7.94658C0 8.22303 0.0402151 8.50953 0.150823 8.78095C0.638506 9.98726 1.88034 10.7312 3.45902 10.1029C3.83609 9.95208 14.2785 5.74506 14.2785 5.74506C14.2785 5.74506 10.1659 16.1696 10.01 16.5566C9.41176 18.0495 10.1307 19.4015 11.3524 19.8539C11.6239 19.9544 11.9055 20.0047 12.182 19.9997C13.1825 19.9946 14.0623 19.4066 14.4947 18.2304C14.5601 18.0545 19.7034 3.93559 19.814 3.59883C19.8793 3.39778 20 2.92531 20 2.5986C20 1.89994 19.7436 1.2415 19.2459 0.743893C18.7582 0.251315 18.1046 0 17.4158 0C17.0789 0 16.8074 0.0603156 16.3952 0.190999C16.1488 0.27142 2.8909 5.20222 1.75968 5.62443C0.628457 6.04664 -2.76166e-06 6.95138 0.00502489 7.94658' fill='%23ED1C24'/%3E%3C/svg%3E%0A");
+        content: "";
+    }
+}
+
+.biz .list ul {
+    display: flex;
+}
+.biz .list ul li {
+    width: 25%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    position: relative;
+}
+.biz .list ul li.biz_1 {
+    background-image: url(../images/biz_1.png);
+}
+.biz .list ul li.biz_2 {
+    background-image: url(../images/biz_2.png);
+}
+.biz .list ul li.biz_3 {
+    background-image: url(../images/biz_3.png);
+}
+.biz .list ul li.biz_4 {
+    background-image: url(../images/biz_4.png);
+}
+.biz .list ul li::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.2;
+    content: "";
+}
+.biz .list ul li a {
+    display: block;
+    height: 800px;
+    position: relative;
+    z-index: 10;
+    /* li의 before가 position 값이 있으면 a보다 더 위에 배치됨
+    -> a를 before 위에 배치하려면 a에 position과 z-index 부여 */
+}
+
+.news .list ul li a {
+    display: block;
+    border-top: 1px solid #1d1d1d;
+}
+.news .list ul li a:hover {
+    position: relative;
+}
+.news .list ul li a:hover::before {
+    position: absolute;
+    left: 0;
+    top: -1px;
+    width: 100%;
+    height: 2px;
+    background-color: #1d1d1d;
+    content: "";
+}
+.news .list ul li a .date {
+    display: block;
+    font-size: 45px;
+    color: #1d1d1d;
+    margin: 10px 0 20px 0;
+}
+.news .list ul li a h3 {
+    font-size: 25px;
+    color: #1d1d1d;
+    line-height: 1.4;
+    height: 2.8em;  /* 2줄 제한: 행간 * 줄수(단위는 em) */
+    overflow: hidden;
+}
+.news .list ul li a p {
+    margin: 10px 0 50px 0;
+    line-height: 1.4;
+    height: 4.2em;
+    overflow: hidden;
+    color: #3d3d3d;
+}
+.news .list {
+    position: relative;
+}
+.news .control .scroll {
+    position: relative;
+}
+.news .control .scroll .swiper-scrollbar {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, .1);
+}
+.news .control .scroll .swiper-scrollbar .swiper-scrollbar-drag {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    background: rgba(237, 28, 36, .8);
+    border-radius: 10px;
+    cursor: pointer; /* 오버하면 마우스가 손가락 모양으로 바뀜 */
+}
+.news .control .btn_wrap a {
+    position: absolute;
+    display: block;
+    right: 20px;
+    top: -25px;
+    width: 100%;
+    height: 100%;
+    text-align: right;
+}
+.news .control .btn_wrap a span {
+    position: relative;
+}
+.news .control .btn_wrap a span::after {
+    position: absolute;
+    right: -20px;
+    top: -2px;
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='0.8'%3E%3Cmask id='mask0_21_110' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='20' height='20'%3E%3Crect width='20' height='20' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_21_110)'%3E%3Cpath d='M9.37516 10.625H4.5835V9.37504H9.37516V4.58337H10.6252V9.37504H15.4168V10.625H10.6252V15.4167H9.37516V10.625Z' fill='%232D2D2D'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+    content: "";
+}
+.news .control .btn_wrap a:hover {
+    font-weight: 700;
+}
+.news .control .btn_wrap a:hover span::after {
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_79_26' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='20' height='20'%3E%3Crect width='20' height='20' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_79_26)'%3E%3Cpath d='M9.1665 10.8333H4.1665V9.16663H9.1665V4.16663H10.8332V9.16663H15.8332V10.8333H10.8332V15.8333H9.1665V10.8333Z' fill='%231C1B1F'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+
+
+@media screen and (max-width:1024px) {
+    .news .list ul li {
+        width: 400px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .news .list ul li {
+        width: 263px;
+    }
+    .news .list ul li a .date {
+        font-size: 25px;
+        margin: 10px 0 10px 0;
+    }
+    .news .list ul li a h3 {
+        font-size: 15px;
+    }
+    .news .list ul li a p {
+        margin: 10px 0 30px 0;
+        line-height: 1.2;
+        height: 3.6em;
+        overflow: hidden;
+        font-size: 13px;
+    }
+    .news .control .btn_wrap a {
+        position: relative;
+        display: block;
+        text-align: center;
+        padding: 50px 0 0 0;
+    }
+    .news .control .btn_wrap a span::after {
+        right: -15px;
+        top: 0;
+        width: 15px;
+        height: 15px;
+    }
+    .news .control .btn_wrap a:hover {
+        font-weight: 500;
+    }
+}
+
+.service {
+    margin: 135px 0 0 0;
+    padding: 100px 0 150px 0;
+    background: url(../images/service_bg.png) no-repeat center center / cover;
+}
+.service .tit h2 {
+    display: none;
+}
+section.service .tit p {
+    color: #fff;
+}
+.service .list ul  {
+    display: flex;
+    justify-content: space-between;
+}
+.service .list ul li {
+    width: calc(33.33% - 16px);
+    /* 100 / li의 개수(3) = 33.33%
+       중간여백 총합(24*2) / li의 개수(3) = 48/3=16
+       calc(33.33% - 16px) */
+}
+.service .list ul li a {
+    display: block;
+    height: 122px;
+    background-color: rgba(255, 255, 255, 0.8);
+    transition: 0.5s;
+}
+.service .list ul li:hover a {
+    transform: translate(-10px, -10px);
+    box-shadow: 5px 5px 5px rgba(255, 255, 255, .25);
+    /* 오버시 이동하는 애니메이션을 주면 오버 범위가 변경되기 때문에 오류 발생함
+       -> a가 이동하고, a를 감싸는 움직이지 않는 li에 오버를 줌 */
 }
