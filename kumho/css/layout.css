@@ -411,7 +411,153 @@ header.fixed .logo a::before {
     }
 }
 
-
 footer {
-    height: 200vh;
+    background-color: #0C0906;
+    color: rgba(255, 255, 255, 0.6);
+    padding: 50px 0 100px;
+}
+footer .wrapper {
+    position: relative;
+}
+footer .youtube {
+    position: absolute;
+    right: 215px;
+    top: 0;
+}
+footer .youtube a {
+    display: block;
+    width: 46px;
+    height: 46px;
+    font-size: 0;
+    line-height: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    position: relative;
+}
+footer .youtube a::before {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 31px;
+    height: 23px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='26' height='19' viewBox='0 0 26 19' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_23_396)'%3E%3Cpath d='M26 5.95343C26 2.6618 23.4431 0 20.2972 0H5.70276C2.55691 0 0 2.6693 0 5.95343V13.0391C0 16.3307 2.55691 18.9925 5.70276 18.9925H20.2901C23.4431 18.9925 25.9928 16.3232 25.9928 13.0391V5.95343H26ZM17.4171 10.0324L10.874 13.414C10.6155 13.5564 9.74641 13.3615 9.74641 13.0616V6.12589C9.74641 5.81847 10.6227 5.62352 10.8812 5.77348L17.1442 9.32755C17.4099 9.485 17.6829 9.8824 17.4171 10.0324Z' fill='%23FF0000'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_23_396'%3E%3Crect width='26' height='19' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+    content: "";
+}
+footer .family_site {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 200px;
+}
+footer .family_site button {
+    width: 100%;
+    height: 47px;
+    background-color: #0C0906;
+    border: solid 1px rgba(217, 217, 217, 0.8);
+    border-radius: 25px;
+    text-align: left;
+    padding-left: 20px;
+    position: relative;
+}
+footer .family_site button::after {
+    position: absolute;
+    right: 20px;
+    top: 17px;
+    width: 15px;
+    height: 15px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='15' height='15' viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='0.8'%3E%3Cmask id='mask0_23_386' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='15' height='15'%3E%3Crect y='15' width='15' height='15' transform='rotate(-90 0 15)' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_23_386)'%3E%3Cpath d='M13.75 9.98413L12.6406 11.0935L7.5 5.95288L2.35937 11.0935L1.25 9.98413L7.5 3.73413L13.75 9.98413Z' fill='white'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+    content: "";
+}
+footer .family_site button.famil_close::after {
+    transform: rotate(180deg);
+}
+footer .family_site ul {
+    display: none;
+    position: absolute;
+    left: 0;
+    bottom: 47px;
+    width: 100%;
+    background-color: #0C0906;
+    border: solid 1px rgba(217, 217, 217, 0.8);
+    border-radius: 25px;
+    padding: 20px;
+}
+footer .family_site ul a {
+    display: block;
+    line-height: 2;
+}
+footer .family_site .famil_close {
+    display: none;
+}
+footer .family_site.open .famil_open {
+    display: none;
+}
+footer .family_site.open .famil_close {
+    display: block;
+}
+footer .f_nav ul {
+    display: flex;
+}
+footer .f_nav ul li {
+    margin-right: 40px;
+}
+footer .f_nav ul li a em {
+    color: #fff;
+}
+footer .copyright {
+    color: rgba(255, 255, 255, 0.4);
+    margin-top: 50px;
+}
+@media screen and (max-width: 1024px) {
+    footer .f_nav ul li {
+        margin-right: 25px;
+    }
+}
+@media screen and (max-width: 768px) {
+    footer {
+        background-color: #0C0906;
+        color: rgba(255, 255, 255, 0.6);
+        padding: 0 0 50px 0;
+    }
+    footer .youtube {
+        position: relative;
+        right: auto;
+        top: -22px;
+        text-align: center;
+    }
+    footer .youtube a {
+        display: inline-block;
+    }
+    footer .family_site {
+        position: relative;
+        right: auto;
+        top: auto;
+        width: auto;
+        margin: 15px 0 30px 0;
+    }
+    footer .family_site button {
+        height: 32px;
+    }
+    footer .family_site button::after {
+        right: 25px;
+        top: 8px;
+        width: 13px;
+        height: 13px;
+    }
+    footer .f_nav ul {
+        flex-wrap: wrap; /* 두 줄 허용 */
+    }
+    footer .f_nav ul li {
+        margin: 0 38px 14px 0;
+    }
+    footer .copyright {
+        margin-top: 30px;
+    }
 }
