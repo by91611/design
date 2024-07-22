@@ -231,7 +231,6 @@ section .tit p {
     -> a를 before 위에 배치하려면 a에 position과 z-index 부여 */
 }
 .biz .list ul li a .inner {
-    margin: 0 30px;
     /* a에 오버했을 때 효과를 부드럽게 주기 위해 absolute(a를 기준으로 정렬) */
     position: absolute;
     left: 5%;
@@ -251,30 +250,65 @@ section .tit p {
 .biz .list ul li a .inner p {
     opacity: 0;
     transition: 0.5s;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
-/* 하나의 li에 오버했을 때 */
-.biz .list ul li.on {
-    width: 49%;
+@media screen and (min-width:769px) {
+    /* 하나의 li에 오버했을 때 */
+    .biz .list ul li.on {
+        width: 49%;
+    }
+    .biz .list ul li.off {
+        /* width: 17%; */
+    }
+    .biz .list ul li.on::before {
+        opacity: 0;
+    }
+    .biz .list ul li.off::before {
+        opacity: 0.4;
+    }
+    .biz .list ul li.off a {
+        opacity: 0.9;
+    }
+    .biz .list ul li.on a .inner {
+        bottom: 30px;
+    }
+    .biz .list ul li.on a .inner p {
+        color: rgba(255, 255, 255, 0.8);
+        opacity: 1;
+    }
 }
-.biz .list ul li.off {
-    /* width: 17%; */
+@media screen and (max-width:768px) {
+    .biz .list ul {
+        display: block;
+    }
+    .biz .list ul li {
+        width: auto;
+        margin-bottom: 1px;
+    }
+    .biz .list ul li a {
+        height: 110px;
+    }.biz .list ul li a .inner {
+        margin: 0;
+        /* a에 오버했을 때 효과를 부드럽게 주기 위해 absolute(a를 기준으로 정렬) */
+        position: absolute;
+        left: 20px;
+        bottom: 15px;
+        width: calc(100% - 40px);
+        transition: 0.5s;
+    }
+    .biz .list ul li a .inner strong {
+        font-size: 10px;
+    }
+    .biz .list ul li a .inner h3 {
+        font-size: 15px;
+        margin: 0;
+    }
+    .biz .list ul li a .inner p {
+        display: none;
+    }
 }
-.biz .list ul li.on::before {
-    opacity: 0;
-}
-.biz .list ul li.off::before {
-    opacity: 0.4;
-}
-.biz .list ul li.off a {
-    opacity: 0.9;
-}
-.biz .list ul li.on a .inner {
-    bottom: 30px;
-}
-.biz .list ul li.on a .inner p {
-    opacity: 1;
-}
-
 
 .news .list ul li a {
     display: block;
@@ -509,3 +543,4 @@ section.service .tit p {
         margin: 0 0 5px 0;
     }
 }
+

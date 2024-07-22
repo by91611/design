@@ -14,6 +14,10 @@
     <title>금호건설</title>
 </head>
 <body>
+    <div class="skip_nav">
+        <a href="#skip_contents">본문 바로가기</a>
+        <a href="#skip_menu">대메뉴 바로가기</a>
+    </div>
     <div id="wrap">
         <!-- 하단으로 스크롤 했을 때 메뉴 고정: fixed
              header에 마우스 오버했을 때 디자인 변경: fixed
@@ -21,7 +25,7 @@
              모바일에서 메뉴를 열었을 때: menu_open -->
         <header>
             <h1 class="logo"><a href="index.html">금호건설</a></h1>
-            <nav class="gnb">
+            <nav class="gnb" id="skip_menu">
                 <button class="gnb_open">메뉴열기</button>
                 <div class="gnb_wrap">
                     <ul class="depth1">
@@ -93,7 +97,8 @@
                 <a href="https://www.artera.co.kr/main" target="_blank" title="새창 열림" class="atera">ATERA</a>
             </div>
         </header>
-        <main class="container">
+        <main class="container" id="skip_contents"> 
+            <!-- skip 내비게이션에서 본문 바로가기를 누르면 이동하는 곳 -->
             <section class="visual">
                 <h2>비쥬얼 팝업</h2>
                 <div class="swiper"> 

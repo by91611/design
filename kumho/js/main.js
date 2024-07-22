@@ -60,9 +60,16 @@ $(document).ready(function(){
     /* .biz .list ul li
         마우스를 오버한 li: on 클래스 추가 / 마우스 오버하지 않은 li: off 클래스 추가 */ 
     $('.biz .list ul li').on('mouseenter', function(){
+        if($(window).width() > 768){
+            $('.biz .list ul li').removeClass('on')
+            $('.biz .list ul li').addClass('off')
+            $(this).removeClass('off')
+            $(this).addClass('on')
+        }
+        
+    })
+    $('.biz .list ul li').on('mouseleave', function(){
         $('.biz .list ul li').removeClass('on')
-        $('.biz .list ul li').addClass('off')
-        $(this).removeClass('off')
-        $(this).addClass('on')
+        $('.biz .list ul li').removeClass('off')
     })
 })
