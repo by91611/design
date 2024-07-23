@@ -66,7 +66,6 @@ $(document).ready(function(){
             $(this).removeClass('off')
             $(this).addClass('on')
         }
-        
     })
     $('.biz .list ul li').on('mouseleave', function(){
         $('.biz .list ul li').removeClass('on')

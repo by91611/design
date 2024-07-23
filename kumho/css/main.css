@@ -436,7 +436,7 @@ section .tit p {
         height: 15px;
     }
     .news .control .btn_wrap a:hover {
-        font-weight: 500;
+        font-weight: 700;
     }
 }
 
@@ -541,6 +541,10 @@ section.service .tit p {
     .service .list ul li a .inner h3 {
         font-size: 15px;
         margin: 0 0 5px 0;
+    }
+    .service .list ul li:hover a {
+        transform: translate(0, 0);
+        box-shadow: none;
     }
 }
 

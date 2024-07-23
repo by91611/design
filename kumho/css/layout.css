@@ -584,3 +584,117 @@ footer .copyright {
         margin-top: 30px;
     }
 }
+
+/* 서브페이지 레이아웃 */
+.sub_visual {
+    height: 350px;
+    background: url(../images/common/sub_visual01.png) no-repeat center center / cover;
+    color: #fff;
+    text-align: center;
+}
+.sub_visual.bg1 {
+    background-image: url(../images/common/sub_visual01.png);
+}
+.sub_visual.bg2 {
+    background-image: url(../images/common/sub_visual02.png);
+}
+.sub_visual.bg3 {
+    background-image: url(../images/common/sub_visual03.png);
+}
+.sub_visual.bg4 {
+    background-image: url(../images/common/sub_visual04.png);
+}
+.sub_visual.bg5 {
+    background-image: url(../images/common/sub_visual05.png);
+}
+.sub_visual strong {
+    display: block;
+    font-size: 45px;
+    padding: 195px 0 10px 0;
+}
+.sub_menu {
+    color: #1d1d1d;
+    height: 50px;
+    border-bottom: 1px solid #ccc;
+}
+.sub_menu .wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+.sub_menu .lnb ul {
+    display: flex;
+}
+.sub_menu .lnb ul li a {
+    display: block;
+    line-height: 50px;
+    padding: 0 15px;
+}
+.sub_menu .lnb ul li:first-child a {
+    padding-left: 0;
+}
+.sub_menu .lnb ul li.active a,
+.sub_menu .lnb ul li a:hover {
+    font-weight: 700;
+}
+.sub_menu .breadcrumb ol {
+    display: flex;
+}
+.sub_menu .breadcrumb ol li {
+    margin-right: 40px;
+    position: relative;
+}
+.sub_menu .breadcrumb ol li::after {
+    position: absolute;
+    right: -30px;
+    top: 18px;
+    width: 15px;
+    height: 15px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_99_505' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='20' height='20'%3E%3Crect width='20' height='20' transform='matrix(-1 0 0 1 20 0)' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_99_505)'%3E%3Cpath d='M13.3202 18.0448L14.5029 16.8621L7.64085 10L14.5029 3.13792L13.3202 1.95522L5.27543 10L13.3202 18.0448Z' fill='%231D1D1D'/%3E%3C/g%3E%3C/svg%3E%0A");
+    content: "";
+}
+.sub_menu .breadcrumb ol li:last-child {
+    margin-right: 0;
+}
+.sub_menu .breadcrumb ol li:last-child:after {
+    display: none;
+}
+.sub_menu .breadcrumb ol li a {
+    display: block;
+    line-height: 50px;
+}
+.sub_menu .breadcrumb ol li.home a {
+    font-size: 0;
+    line-height: 0;
+    width: 25px;
+    height: 25px;
+    position: relative;
+} 
+.sub_menu .breadcrumb ol li.home a::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 50px; /* sub_menu 높이 -> 가운데 정렬 */
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='25' height='25' viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_99_499' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='25' height='25'%3E%3Crect width='25' height='25' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_99_499)'%3E%3Cpath d='M4.6875 21.3542V9.63541L12.5 3.75598L20.3125 9.63541V21.3542H14.4831V14.3831H10.5169V21.3542H4.6875Z' fill='%231D1D1D'/%3E%3C/g%3E%3C/svg%3E%0A");
+    content: "";
+}
+.sub_menu .breadcrumb ol li.now a {
+    font-weight: 700;
+}
+
+.sub_contents .sub_tit h2 {
+    font-size: 25px;
+    color: #ED1C24;
+    margin: 100px 0 5px 0;
+}
+.sub_contents .sub_tit p {
+    font-size: 35px;
+    font-weight: 700;
+    color: #1d1d1d;
+}
