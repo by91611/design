@@ -2,3 +2,29 @@
 @import url(fonts.css);
 @import url(common.css);
 @import url(layout.css);
+
+/* 각 서브 콘텐츠 페이지 내용 코딩. 절대 이름이 겹치면 안됨.
+   규칙: 'cst_페이지명'으로 감싸서 다른페이지와 겹치지 않도록 함 */
+
+/* 회사소개 - CEO인사말 */
+.cts_ceo {
+    margin: 70px 0 140px 0;
+}
+.cts_ceo .content {
+    display: flex;
+    justify-content: space-between;
+}
+.cts_ceo .content .txt_wrap {
+    width: 57.3%;
+}
+.cts_ceo .content .photo_wrap {
+    width: 35.8%;
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+}
+.cts_ceo .content .photo_wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

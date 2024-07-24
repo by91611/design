@@ -564,7 +564,7 @@ footer .copyright {
     footer .youtube {
         position: relative;
         right: auto;
-        top: -22px;
+        top: -34px;
         text-align: center;
     }
     footer .youtube a {
@@ -725,7 +725,7 @@ footer .copyright {
     }
     .sub_visual strong {
         font-size: 25px;
-        padding: 140px 0 0 0;
+        padding: 130px 0 0 0;
     }
     .sub_visual p {
         display: none;
@@ -747,7 +747,7 @@ footer .copyright {
         /* 메뉴의 수가 많아서 한번에 표시되지 않으면 가로 스크롤바 생성 */
         overflow-y: auto; /* 내부 요소가 감싸는 요소보다 넓어지면 가로스크롤바 생성 */
     }
-    menu .wrapper::-webkit-scrollbar {
+    .sub_menu .wrapper::-webkit-scrollbar {
         height: 5px;
         background-color: transparent; /* 투명 */
     }
@@ -764,6 +764,7 @@ footer .copyright {
     .sub_menu .lnb ul li a {
         line-height: 35px;
         padding: 0 15px;
+        white-space: nowrap;
     }
     .sub_menu .breadcrumb {
         display: none;
