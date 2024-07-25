@@ -10,21 +10,99 @@
 .cts_ceo {
     margin: 70px 0 140px 0;
 }
-.cts_ceo .content {
+.cts_ceo .wrapper {
     display: flex;
     justify-content: space-between;
 }
-.cts_ceo .content .txt_wrap {
-    width: 57.3%;
+.cts_ceo .tit p {
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 1.4;
+    text-align: center;
+    margin: 0 0 50px 0;
 }
-.cts_ceo .content .photo_wrap {
-    width: 35.8%;
-    overflow: hidden;
+.cts_ceo .txt {
+    line-height: 1.4;
+}
+.cts_ceo .txt_wrap {
+    /* width: 57.3%; */
+    width: calc(100% - 550px);
+}
+.cts_ceo .sign {
+    display: flex;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 50px 0 0 0;
+}
+.cts_ceo .sign strong {
+    margin-right: 20px;
+}
+.cts_ceo .photo_wrap {
     font-size: 0;
     line-height: 0;
+    /* width: 42%; */
+    width: 500px;
+    border-radius: 40px;
+    position: relative;
 }
-.cts_ceo .content .photo_wrap img {
+/* .cts_ceo .photo_wrap::before {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 2000px;
+    height: 450px;
+    z-index: -1;
+    background-color: rgba(233, 213, 266, 0.8);
+    border-radius: 100px 0 0 0;
+    content: "";
+} */
+.cts_ceo .photo_wrap img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+@media screen and (max-width: 1300px) {
+    .cts_ceo .txt_wrap {
+        width: calc(100% - 440px);
+    }
+    .cts_ceo .photo_wrap {
+        width: 400px;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .cts_ceo .tit p {
+        font-size: 20px;
+        margin: 0 0 25px 0;
+    }
+    .cts_ceo .txt_wrap {
+        width: calc(100% - 330px);
+    }
+    .cts_ceo .photo_wrap {
+        width: 300px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .cts_ceo {
+        margin: 25px 0 50px 0;
+    }
+    .cts_ceo .wrapper {
+        display: block;
+    }
+    .cts_ceo .tit p {
+        font-size: 15px;
+        text-align: center;
+    }
+    .cts_ceo .txt_wrap {
+        width: auto;
+    }
+    .cts_ceo .photo_wrap {
+        width: auto;
+        max-width: 300px;
+        height: 400px;
+        margin: 0 auto;
+    }
+    .cts_ceo .sign {
+        font-size: 15px;
+        margin: 25px 0 0 0;
+    }
 }
