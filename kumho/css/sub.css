@@ -122,7 +122,12 @@
 .cts_history .tab_area .tab_btn ul {
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px solid #1d1d1d;
+    border-bottom: 1px solid #3d3d3d;
+}
+.cts_history .tab_area .tab_btn ul li {
+    width: 25%;
+    position: relative;
+    text-align: center;
 }
 .cts_history .tab_area .tab_btn ul li button {
     font-size: 20px;
@@ -136,7 +141,6 @@
 .cts_history .tab_area .tab_btn ul li button:hover {
     font-weight: 700;
     color: #ED1C24;
-    position: relative;
 }
 .cts_history .tab_area .tab_btn ul li.active button::after,
 .cts_history .tab_area .tab_btn ul li button:hover::after {
@@ -158,6 +162,12 @@
     color: #fff;
     text-align: center;
     margin-top: 50px;
+}
+.cts_history .tab_area .tab_cnt div[role="tabpanel"] {
+    display: none;
+}
+.cts_history .tab_area .tab_cnt div[role="tabpanel"].active {
+    display: block;
 }
 .cts_history .tab_area .tab_cnt div[role="tabpanel"] .history_tit.bg1 {
     background-image: url(../images/contents/history_tit_bg1.png);
@@ -217,7 +227,7 @@
 }
 .cts_history .history_list .year_wrap h4::before {
     position: absolute;
-    left: -55px;
+    left: -54px;
     top: 15px;
     width: 10px;
     height: 10px;
@@ -259,6 +269,9 @@
     }
 }
 @media screen and (max-width:1024px) {
+    .cts_history {
+        margin: 30px 0 100px 0;
+    }
     .cts_history .tab_area .tab_btn ul li button {
         font-size: 15px;
         padding: 15px 50px;
@@ -268,6 +281,7 @@
     }
     .cts_history .tab_area .tab_cnt div[role="tabpanel"] .history_tit {
         height: 200px;
+        margin-top: 25px;
     }
     .cts_history .tab_area .tab_cnt div[role="tabpanel"] .history_tit strong {
         display: block;
@@ -280,7 +294,7 @@
 }
 @media screen and (max-width:768px) { 
     .cts_history {
-        margin: 35px 0 70px 0;
+        margin: 25px 0 70px 0;
     }
     .cts_history .tab_area .tab_cnt div[role="tabpanel"] .history_tit {
         height: 100px;
@@ -301,7 +315,7 @@
     }
     .cts_history .history_list::before {
         left: 7px;
-        top: 5px;
+        top: 8px;
         height: calc(100% - 5px);
     }
     .cts_history .history_list .year_wrap {
@@ -309,7 +323,7 @@
     }
     .cts_history .history_list .year_wrap:last-child::before {
         left: 7px;
-        top: 5px;
+        top: 8px;
         width: 1px;
         height: calc(100% - 5px);  
     }
@@ -319,7 +333,7 @@
     }
     .cts_history .history_list .year_wrap h4::before {
         left: -11px;
-        top: 5px;
+        top: 8px;
         width: 7px;
         height: 7px;
     }
