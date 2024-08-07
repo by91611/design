@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&display=swap');
+
+@font-face {
+    font-family: 'S-CoreDream';
+    font-weight: 300;
+    font-style: normal;
+	src: local('S-CoreDream Light'), url(폰트경로) format('woff2'), url(폰트경로) format('woff');
+}
+@font-face {
+    font-family: 'S-CoreDream';
+    font-weight: 400;
+    font-style: normal;
+	src: local('S-CoreDream Regular'), url(폰트경로) format('woff2'), url(폰트경로) format('woff');
+}
+@font-face {
+    font-family: 'S-CoreDream';
+    font-weight: 600;
+    font-style: normal;
+	src: local('S-CoreDream Bold'), url(폰트경로) format('woff2'), url(폰트경로) format('woff');
+}
