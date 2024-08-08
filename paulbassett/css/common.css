@@ -60,6 +60,7 @@ button:focus {
 :root {
     --color-main: #c4004a;
     --txt-color-tit: #1d1d1d;
+    --txt-color-txt: #3d3d3d;
     --txt-color-gray: #666;
     --txt-color-white: #fff;
     --txt-color-w80: rgba(255, 255, 255, .8);

@@ -22,3 +22,91 @@
     top: 100px;
     /* a에 포커스 되면 올라간 만큼 내려옴 */
 }
+
+header {
+    position: relative;
+    z-index: 100;
+    /* z-index 값을 주기 위해서는 position을 줘야 함 */
+}
+@media screen and (min-width:1025px) { /* 1025px 이상일 때 - pc버전 */
+    header .header_top {
+        height: 100px;
+        display: flex;
+        justify-content: space-between;
+    }
+    header .header_top .tnb ul {
+        display: flex;
+    }
+    header .header_top .tnb ul li a {
+        display: block;
+        padding: 2.67rem 1.33rem;
+        color: var(--txt-color-gray);
+    }
+    header .header_top .tnb ul li a:hover {
+        font-weight: 700;
+        color: var(--txt-color-txt);
+    }
+    header .header_top .tnb ul li:first-child a {
+        padding-left: 0;
+    }
+    header .header_top .tnb ul li:last-child a {
+        padding-right: 0;
+    }
+    header .header_sub {
+        height: 50px;
+        position: relative;
+    }
+    header .header_sub .logo {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0);
+        top: -60px;
+    }
+    header .header_sub .logo a {
+        display: block;
+        width: 80px;
+        height: 50px;
+        font-size: 0;
+        line-height: 0;
+        position: relative;
+    }
+    header .header_sub .logo a::after {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: url(../images/common/logo.svg) no-repeat center center / contain;
+        content: "";
+    }
+    header .header_sub .gnb ul.depth1 {
+        display: flex;
+        position: relative;
+    }
+    header .header_sub .gnb ul.depth1 > li {
+        width: 16.66%;
+        text-align: center;
+    }
+    header .header_sub .gnb ul.depth1 > li > a {
+        display: block;
+        font-size: 1.33em;
+        font-weight: 700;
+        line-height: 50px;
+        color: var(--txt-color-tit);
+    }
+    header .header_sub .gnb ul.depth2 {
+        position: absolute; /* header 밖에 존재하는 요소 -> position:absolute */
+        left: 0;
+        top: 50px;
+        width: 100%;
+        display: none;
+    }
+}
+@media screen and (max-width:1024px) { /*1024px 이하일 때 - mobile */
+    header .header_top {
+        display: none;
+    }
+    header .header_sub .gnb {
+        display: none;
+    }
+}
