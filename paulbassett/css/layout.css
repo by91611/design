@@ -81,11 +81,11 @@ header {
     }
     header .header_sub .gnb ul.depth1 {
         display: flex;
-        position: relative;
     }
     header .header_sub .gnb ul.depth1 > li {
         width: 16.66%;
         text-align: center;
+        position: relative;
     }
     header .header_sub .gnb ul.depth1 > li > a {
         display: block;
