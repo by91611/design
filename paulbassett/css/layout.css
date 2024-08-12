@@ -215,9 +215,61 @@ header .header_sub .logo a::after {
     }
     header .header_sub .gnb .gnb_wrap {
         display: none;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: #fff;
     }
     header .header_sub .gnb .gnb_open {
         display: block;
+    }
+    header .header_sub .gnb .gnb_wrap .depth1 {
+        margin: 50px 0 0 0;
+        height: calc(100% - 50px); /* 스크롤 가능하도록 */
+        overflow-y: auto; /* 콘텐츠가 길어지면 스크롤바 생성 */
+    }
+    header .header_sub .gnb .gnb_wrap .depth1 > li > a  {
+        display: block;
+        font-size: 1.42rem;
+        font-weight: 700;
+        line-height: 2;
+        padding: 0 20px;
+        color: var(--txt-color-tit);
+        white-space: nowrap;
+    }
+    header .header_sub .gnb .gnb_wrap .depth1 > li > a > span {
+        position: relative;
+    }
+    header .header_sub .gnb .gnb_wrap .depth1 > li > a > span::after {
+        position: absolute;
+        right: -20px;
+        top: 0;
+        width: 20px;
+        height: 24px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 -960 960 960' width='24px' fill='%235f6368'%3E%3Cpath d='m480-541.85-184 184L253.85-400 480-626.15 706.15-400 664-357.85l-184-184Z'/%3E%3C/svg%3E");
+        content: "";
+    }
+    header .header_sub .gnb .gnb_wrap .depth1 > li.open > a > span::after {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 -960 960 960' width='24px' fill='%23c4004a'%3E%3Cpath d='M480-357.85 253.85-584 296-626.15l184 184 184-184L706.15-584 480-357.85Z'/%3E%3C/svg%3E");
+    }
+    header .header_sub .gnb .gnb_wrap .depth2 {
+        display: none;
+        background-color: var(--color-main);
+        color: #fff;
+        padding: 10px 20px;
+        font-size: 1.07rem;
+    }
+    header .header_sub .gnb .gnb_wrap .depth1 > li.open .depth2 {
+        display: block;
+    }
+    header .header_sub .gnb .gnb_wrap .depth2 > li > a {
+        display: block;
+        line-height: 2;
     }
     header .header_sub .gnb .gnb_open,
     header .header_sub .gnb .gnb_close {
@@ -264,7 +316,18 @@ header .header_sub .logo a::after {
     header.fixed + .container {
         margin-top: 50px;
     }
+    /* 메뉴가 열렸을 */
+    header.menu_open .header_sub .gnb .gnb_wrap {
+        display: block;
+    }
+    header.menu_open .header_sub .gnb .gnb_open {
+        display: none;
+    }
+    header.menu_open .header_sub .gnb .gnb_close {
+        display: block;
+    }
 }
+
 footer {
     margin-top: 1000px;
 }

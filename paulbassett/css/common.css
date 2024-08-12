@@ -67,3 +67,24 @@ button:focus {
     --txt-color-w60: rgba(255, 255, 255, .6);
     --txt-size-tit: 5rem; 
 }
+
+@media screen and (max-width:1300px) {
+    :root {
+        --txt-size-tit: 4.5rem;
+    }
+}
+@media screen and (max-width:1024px) {
+    :root {
+        --txt-size-tit: 4rem;
+    }
+}
+@media screen and (max-width:768px) {
+    :root {
+        --txt-size-tit: 3rem;
+    }
+}
+@media screen and (max-width:495px) {
+    :root {
+        --txt-size-tit: 2.3rem;
+    }
+}
