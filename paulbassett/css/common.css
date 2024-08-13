@@ -47,14 +47,14 @@ button:focus {
 } */
 
 ::selection {
-    background-color: #b12937;
+    background-color: #c4004a;
     color: #fff;
 }
 
 /*  기본 글자크기 15px일 때
     75px - 5rem
-    50px - 3.33em
-    20px - 1.33em */
+    50px - 3.33rem
+    20px - 1.33rem */
     
 
 :root {
@@ -66,6 +66,7 @@ button:focus {
     --txt-color-w80: rgba(255, 255, 255, .8);
     --txt-color-w60: rgba(255, 255, 255, .6);
     --txt-size-tit: 5rem; 
+    --margin-tit: 100px 0 0 0;
 }
 
 @media screen and (max-width:1300px) {
@@ -81,6 +82,7 @@ button:focus {
 @media screen and (max-width:768px) {
     :root {
         --txt-size-tit: 3rem;
+        --margin-tit: 50px 0 0 0;
     }
 }
 @media screen and (max-width:495px) {

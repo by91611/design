@@ -12,7 +12,7 @@ $(document).ready(function(){
 
     $('.menu .list .popup').slick({
         dots: false, //하단 페이지 버튼 (true, false)
-	    arrows: false,  //다음, 이전팝업 (true, false)
+	      arrows: false,  //다음, 이전팝업 (true, false)
         swipeToSlide: true, //드래그한만큼 슬라이드 움직이기
         variableWidth: true, //넓이를 자유롭게 설정
         //centerMode: true, //가운데정렬(가운데가 1번)
@@ -44,5 +44,19 @@ $(document).ready(function(){
             },
         ]
         */
+    })
+
+    $('.md .list .popup').slick({
+      dots: false, //하단 페이지 버튼 (true, false)
+      arrows: false,  //다음, 이전팝업 (true, false)
+      variableWidth: true, //넓이를 자유롭게 설정
+      swipeToSlide: true, //드래그한만큼 슬라이드 움직이기
+    })
+
+    $('.sns .list .popup').slick({
+      dots: false, //하단 페이지 버튼 (true, false)
+      arrows: false,  //다음, 이전팝업 (true, false)
+      variableWidth: true, //넓이를 자유롭게 설정
+      swipeToSlide: true, //드래그한만큼 슬라이드 움직이기
     })
 })

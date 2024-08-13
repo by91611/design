@@ -40,7 +40,7 @@
 
 .menu .tit {
     text-align: center;
-    margin: 100px 0 0 0;
+    margin: var(--margin-tit);
 }
 .menu .tit h2 {
     font-family: "Edu AU VIC WA NT Hand";
@@ -60,7 +60,7 @@
     top: 65px;
     z-index: -1;
     width: 100%;
-    height: calc(100% - 69px);
+    height: calc(100% - 69px); /* top값 + border*2배 */
     border: 2px solid #1d1d1d;
     content: "";
 }
@@ -105,9 +105,6 @@
     }
 }
 @media screen and (max-width:768px) {
-    .menu .tit {
-        margin: 50px 0 0 0;
-    }
     .menu .list .popup .popup_item {
         width: 195px;
         padding: 0 0 16px 0;
@@ -124,5 +121,214 @@
     }
     .menu .list .popup .popup_item h3::before {
         width: 50px;
+    }
+}
+
+.brand {
+    margin: 100px 0 0 0;
+}
+.brand .inner {
+    height: 650px;
+    color: #fff;
+    text-align: right;
+    padding: 150px 50px 0 0;
+    background: url(../images/main/brand_bg.png) no-repeat center center / cover;
+}
+.brand .inner h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+.brand .inner p {
+    line-height: 1.4;
+}
+/* 
+    loop애니메이션을 줄 때 감싸는 요소(div) 움질일 요소(span)로 구성되는데 
+    1. 움질일 요소(span)는 반드시 white-space nowrap
+    2. 넓이가 온전하게 인식되어야 함(브라우저 크기를 초과하는 넓이)
+    -> 넓이가 온전히 인식되지 않는 경우는 position:absolute;
+*/
+.brand .loop {
+    height: 5rem;
+    padding-top: 1.33rem;
+    background-color: #010101;
+    color: #fff;
+    font-size: 3.33rem;
+    letter-spacing: 0.1em;
+    position: relative;
+}
+.brand .loop span {
+    white-space: nowrap; /* 줄바꿈 금지 */
+    position: absolute;
+    left: 0;
+    top: 0.5rem;
+    animation-name: brand_loop;
+    animation-duration: 7s;
+    animation-iteration-count: infinite; /* 무한반복 */
+    animation-timing-function: linear;
+}
+@keyframes brand_loop {
+    0% {transform: translate(0, 0);}
+    100% {transform: translate(-50.25%, 0);} /* 첫글자가 다시 맨 앞으로 도달한 값 */
+}
+@media screen and (max-width:1024px) {
+    .brand .inner {
+        height: 500px;
+        padding: 100px 50px 0 50px;
+    }
+    .brand .inner h2 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+    .brand .inner p br {
+        display: none;
+    }
+
+}
+@media screen and (max-width:768px) {
+    .brand {
+        margin: 50px 0 0 0;
+    }
+    .brand .inner {
+        height: auto; 
+        padding: 50px 25px 150px 25px;
+    }
+    .brand .inner p {
+        display: none;
+    }
+    .brand .loop {
+        height: 3.07rem;
+        padding-top: 0.76rem;
+        font-size: 1.92rem;
+    }
+    .brand .loop span {
+        top: 0.4rem;
+    }
+}
+
+.md .tit {
+    margin: var(--margin-tit);
+    text-align: center;
+}
+.md .tit h2 {
+    font-family: "Edu AU VIC WA NT Hand";
+    font-size: var(--txt-size-tit);
+    color: var(--txt-color-tit);
+    font-weight: 500;
+}
+.md .list .popup .popup_item {
+    width: 277px;
+    margin: 50px 12px;
+    text-align: center;
+}
+.md .list .popup .popup_item .photo {
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+}
+.md .list .popup .popup_item .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* 이미지 모두 나오게 */
+}
+.md .list .popup .popup_item h3 {
+    color: #1d1d1d;
+}
+@media screen and (max-width:1300px) {
+    .md .list .popup .popup_item {
+        width: 240px;
+        padding: 0 0 19px 0;
+    }
+}
+@media screen and (max-width:1024px) {
+    .md .list .popup .popup_item {
+        width: 220px;
+        padding: 0 0 17px 0;
+    }
+}
+@media screen and (max-width:768px) {
+    .md .list .popup .popup_item {
+        width: 195px;
+        padding: 0 0 16px 0;
+    }
+}
+
+.sns .tit {
+    margin: 100px 0 50px 0;
+}
+.sns .tit h2 {
+    display: none;
+}
+.sns .tit ul {
+    display: flex;
+    justify-content: flex-end;
+}
+.sns .tit ul li a {
+    display: block;
+    font-size: 0;
+    line-height: 0;
+    width: 37px;
+    height: 37px;
+    margin-right: 10px;
+    position: relative;
+}
+.sns .tit ul li:last-child a {
+    margin-right: 0;
+}
+.sns .tit ul li a::after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    content: "";
+}
+.sns .tit ul li.facebook a::after {
+    background-image: url(../images/main/sns_icon1.png);
+}
+.sns .tit ul li.instagram a::after {
+    background-image: url(../images/main/sns_icon2.png);
+}
+.sns .tit ul li.youtube a::after {
+    background-image: url(../images/main/sns_icon3.png);
+}
+.sns .list .popup .popup_item {
+    padding: 0 10px;
+}
+.sns .list .popup .popup_item .photo {
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+}
+.sns .list .popup .popup_item .photo .img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* 이미지 모두 나오게 */
+}
+.sns .list .popup .popup_item a span {
+    display: block;
+    padding: 10px 0 0 0;
+    color: #1d1d1d;
+    font-weight: 500;
+}
+@media screen and (max-width:1300px) {
+    .sns .list .popup .popup_item {
+        padding: 0 10px;
+    }
+}
+@media screen and (max-width:1024px) {
+    .sns .list .popup .popup_item {
+        padding: 0 10px;
+    }
+}
+@media screen and (max-width:768px) {
+    .sns .tit {
+        margin: 50px 0 25px 0;
+    }
+    .sns .list .popup .popup_item {
+        padding: 0 10px;
     }
 }
