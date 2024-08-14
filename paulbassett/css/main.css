@@ -269,11 +269,10 @@
     line-height: 0;
     width: 37px;
     height: 37px;
-    margin-right: 10px;
     position: relative;
 }
-.sns .tit ul li:last-child a {
-    margin-right: 0;
+.sns .tit ul li:nth-child(2) a {
+    margin-right: 10px;
 }
 .sns .tit ul li a::after {
     position: absolute;

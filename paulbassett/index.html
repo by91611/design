@@ -10,6 +10,8 @@
     <script src="js/main.js"></script>
     <script src="js/slick.min.js"></script>
     <link rel="stylesheet" href="css/slick.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <title>폴바셋</title>
 </head>
 <body>
@@ -324,9 +326,11 @@
                 </div>
             </section>
         </main>
+        <!-- 열기버튼을 클릭하면 open 클래스 추가 -->
         <aside class="quick">
             <button title="퀵메뉴 열기" class="open">QUICK</button>
             <div class="quick_cont">
+                <h2>퀵메뉴</h2>
                 <ul>
                     <li class="quick01"><a href="https://www.baristapaulbassett.co.kr/society/MobileApp.pb"><span>Mobile <br> App</span></a></li>
                     <li class="quick02"><a href="https://www.baristapaulbassett.co.kr/society/Rating.pb"><span>Special <br> Benefit</span></a></li>
@@ -337,15 +341,17 @@
             <button title="퀵메뉴 닫기" class="close">닫기</button>
         </aside>
         <footer>
+            <div class="f_sns">
+                <div class="wrapper">
+                    <ul>
+                        <li class="facebook"><a href="https://www.facebook.com/paulbassettkorea/">페이스북</a></li>
+                        <li class="instagram"><a href="https://www.instagram.com/paulbassettkorea/">인스타그램</a></li>
+                        <li class="youtube"><a href="https://www.youtube.com/@paulbassett2407">유튜브</a></li>
+                    </ul>
+                </div>
+            </div>
             <div class="footer_top">
                 <div class="wrapper">
-                    <div class="f_sns">
-                        <ul>
-                            <li class="facebook"><a href="https://www.facebook.com/paulbassettkorea/">페이스북</a></li>
-                            <li class="instagram"><a href="https://www.instagram.com/paulbassettkorea/">인스타그램</a></li>
-                            <li class="youtube"><a href="https://www.youtube.com/@paulbassett2407">유튜브</a></li>
-                        </ul>
-                    </div>
                     <div class="f_nav">
                         <ul>
                             <li><a href="#n">인정보처리방침</a></li>
@@ -364,7 +370,7 @@
                 <div class="wrapper">
                     <div class="f_info">
                         <span>엠즈씨드(주) 대표이사 : 권익범</span>
-                        <address>주소 : 서울특별시 강남구 도산대로 75길 22 (청담동)</address>
+                        <address>주소 : 서울특별시 강남구 도산대로 75길 22 (청담동)</address> <br>
                         <sapn>사업자등록번호 211-88-95935</sapn>
                         <sapn>대표번호 1899-8829</sapn>
                         <sapn>개인정보관리책임자 : 정보문</sapn>
@@ -374,5 +380,12 @@
             </div>
         </footer>
     </div>
+    <script>
+        AOS.init({
+        offset: 0, // 해당 콘텐츠가 하단에서 몇 px 위로 올라와에 나타나는 효과가 나타날지 셋팅하는 값
+        duration: 500, // 애니메이션 효과가 작동되는 시간
+        easing: 'ease', // 가속도
+        });
+    </script>
 </body>
 </html>
