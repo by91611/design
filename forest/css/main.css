@@ -1,0 +1,69 @@
+@import url(default.css);
+@import url(fonts.css);
+@import url(common.css);
+@import url(layout.css);
+
+
+/* 
+    플러그인을 사용할 때 이미 적용되어 있는 css를 변경하는 방법
+    1. 동일한 이름 앞에 body태그 선택자 추가
+    2. 속성값 뒤에 !important를 추가 
+    (!important: 우선순위 1순위, 해제가 어려움, 모바일에서도 적용됨)
+ */
+body #fp-nav.fp-left {
+    left: 2%; 
+}
+body #fp-nav ul li  {
+    width: auto;
+    height: auto;
+    margin: 0;
+}
+body #fp-nav ul li .fp-tooltip {
+    display: none;
+}
+body #fp-nav ul li a {
+    width: auto;
+    height: auto;
+}
+body #fp-nav ul li a.active span, 
+body #fp-nav ul li:hover a.active span {
+    height: auto;
+    width: auto;
+    margin: 0;
+    border-radius: 0;
+}
+body #fp-nav ul li a span {
+    position: relative;
+    border: 0;
+    background: transparent;
+    left: auto;
+    top: auto;
+    margin: 0;
+}
+body #fp-nav .fp-sr-only {
+    padding: 0;
+    overflow: visible;
+    clip: auto;
+}
+
+.section {
+    color: #fff;
+    font-size: 5rem;
+    text-align: center;
+}
+.visual {
+    background-color: var(--color-main);
+}
+.tree {
+    background-color: #fff;
+}
+.forest {
+    background-color: #08B1EC;
+}
+.story {
+    background-color: #fff;
+}
+footer {
+    background-color: #1d1d1d;
+    height: 300px;
+}
