@@ -316,7 +316,7 @@
     justify-content: space-between;
 }
 .forest .tit {
-    color: #fff;
+    color: rgba(255, 255, 255, 0.8);
     width: 50%;
 }
 .forest .tit h2 {
@@ -455,7 +455,7 @@
     .forest .list ul li a {
         height: 80px;
         border-radius: 5px;
-        padding: 45px 50px 0 50px;
+        padding: 45px 30px 0 30px;
     }
     .forest .list ul li a::after {
         position: absolute;
@@ -469,6 +469,7 @@
         display: block;
         font-size: 15px;
         text-align: center;
+        white-space: nowrap;
     }
     .forest .list ul li a span::after {
         position: absolute;
@@ -485,16 +486,20 @@
     font-size: 50px;
 }
 .story .tit p {
-    margin: 10px 0 50px 0;
+    margin: 10px 0 30px 0;
+}
+.story .list ul {
+    margin-top: 10px;
 }
 .story .list ul li a {
     display: block;
+    padding: 20px 0 0 0;
     position: relative;
 }
 .story .list ul li a::before {
     position: absolute;
     left: 0;
-    top: -25px;
+    top: 0;
     width: 100%;
     height: 1px;
     background-color: #1d1d1d;
@@ -506,11 +511,13 @@
     line-height: 1.1;
     height: 2.2em;
     overflow: hidden;
-    margin: 25px 0 10px 0;
+    margin: 0 0 10px 0;
+    color: #1d1d1d;
 }
 .story .list ul li a p {
-    line-height: 1.4;
-    height: 5.6em;
+    font-weight: 300;
+    line-height: 1.2;
+    height: 2.4em;
     overflow: hidden;
 }
 .story .list ul li a .date {
@@ -520,11 +527,15 @@
 .story .list ul li a .photo {
     position: relative;
     overflow: hidden;
+    font-size: 0;
+    line-height: 0;
 }
 .story .list ul li a .photo .cate {
     position: absolute;
     left: 0;
     top: 0;
+    font-size: 16px;
+    line-height: 1.4;
     width: 115px;
     height: 33px;
     background-color: #D49E21;
@@ -532,15 +543,125 @@
     text-align: center;
     padding: 5px 10px;
 }
-.story .list ul li a .photo {
+.story .list ul li a .photo img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-
-
-footer {
-    margin-top: 1000px;
-    background-color: #1d1d1d;
-    height: 300px;
+/* a에 마우스오버 -> li에 마우스 오버 */
+.story .list ul li:hover::after {
+    position: absolute;
+    right: 7%;
+    bottom: 20px;
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='71' height='71' viewBox='0 0 71 71' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M31.98 26.2171L44.0516 47.1257C44.2777 47.5174 44.3348 47.9216 44.2229 48.3384C44.1115 48.7552 43.8599 49.0767 43.4682 49.3028C43.0765 49.529 42.6723 49.5861 42.2556 49.4742C41.8387 49.3627 41.5172 49.1112 41.2911 48.7195L29.2195 27.8109L26.6588 37.3676C26.5429 37.7994 26.3005 38.1194 25.9317 38.3279C25.5627 38.536 25.1586 38.5892 24.7191 38.4875C24.269 38.3666 23.9323 38.1239 23.7091 37.7591C23.4856 37.3941 23.4343 36.9864 23.555 36.536L27.0386 23.535C27.1114 23.2631 27.223 23.0368 27.3734 22.8559C27.5236 22.6747 27.7095 22.5201 27.9313 22.3921C28.153 22.2641 28.3799 22.1803 28.6119 22.1408C28.8437 22.1011 29.0956 22.1176 29.3675 22.1904L42.3684 25.674C42.8001 25.79 43.1229 26.0369 43.3366 26.4149C43.5502 26.7934 43.5968 27.2077 43.4764 27.658C43.3447 28.0894 43.1011 28.414 42.7456 28.632C42.3901 28.8499 41.9871 28.8985 41.5367 28.7779L31.98 26.2171Z' fill='white'/%3E%3C/svg%3E%0A");
+    content: "";
+}
+.story .list ul li:hover a {
+    transform: translate(0, -10px);
+}
+.story .list ul li:hover a::after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #D49E21;
+    color: #fff;
+    content: "";
+}
+.story .list ul li:hover a h3 {
+    position: relative;
+    z-index: 10;
+    color: #fff;
+    padding: 0 7%;
+}
+.story .list ul li:hover a p {
+    position: relative;
+    z-index: 10;
+    color: #fff;
+    padding: 0 7%;
+}
+.story .more {
+    text-align: center;
+    margin: 50px;
+}
+.story .more a {
+    display: inline-block;
+    padding: 9px 61px 9px 37px;
+    border: 1px solid #D49E21;
+    border-radius: 21px;
+    color: #D49E21;
+    position: relative;
+    transition: 0.5s;
+}
+.story .more a::after {
+    position: absolute;
+    right: 31px;
+    top: 8px;
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.25 12.75H6.25C6.0375 12.75 5.85942 12.6781 5.71575 12.5342C5.57192 12.3904 5.5 12.2122 5.5 11.9997C5.5 11.7871 5.57192 11.609 5.71575 11.4655C5.85942 11.3218 6.0375 11.25 6.25 11.25H11.25V6.25C11.25 6.0375 11.3219 5.85942 11.4658 5.71575C11.6096 5.57192 11.7878 5.5 12.0003 5.5C12.2129 5.5 12.391 5.57192 12.5345 5.71575C12.6782 5.85942 12.75 6.0375 12.75 6.25V11.25H17.75C17.9625 11.25 18.1406 11.3219 18.2843 11.4658C18.4281 11.6096 18.5 11.7878 18.5 12.0003C18.5 12.2129 18.4281 12.391 18.2843 12.5345C18.1406 12.6782 17.9625 12.75 17.75 12.75H12.75V17.75C12.75 17.9625 12.6781 18.1406 12.5342 18.2843C12.3904 18.4281 12.2122 18.5 11.9997 18.5C11.7871 18.5 11.609 18.4281 11.4655 18.2843C11.3218 18.1406 11.25 17.9625 11.25 17.75V12.75Z' fill='%23DBAD18'/%3E%3C/svg%3E%0A");
+    content: "";
+    transition: 0.5s;
+}
+.story .more a:hover {
+    background-color: #D49E21;
+    color: #fff;
+}
+.story .more a:hover::after {
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.25 12.75H6.25C6.0375 12.75 5.85942 12.6781 5.71575 12.5342C5.57192 12.3904 5.5 12.2122 5.5 11.9997C5.5 11.7871 5.57192 11.609 5.71575 11.4655C5.85942 11.3218 6.0375 11.25 6.25 11.25H11.25V6.25C11.25 6.0375 11.3219 5.85942 11.4658 5.71575C11.6096 5.57192 11.7878 5.5 12.0003 5.5C12.2129 5.5 12.391 5.57192 12.5345 5.71575C12.6782 5.85942 12.75 6.0375 12.75 6.25V11.25H17.75C17.9625 11.25 18.1406 11.3219 18.2843 11.4658C18.4281 11.6096 18.5 11.7878 18.5 12.0003C18.5 12.2129 18.4281 12.391 18.2843 12.5345C18.1406 12.6782 17.9625 12.75 17.75 12.75H12.75V17.75C12.75 17.9625 12.6781 18.1406 12.5342 18.2843C12.3904 18.4281 12.2122 18.5 11.9997 18.5C11.7871 18.5 11.609 18.4281 11.4655 18.2843C11.3218 18.1406 11.25 17.9625 11.25 17.75V12.75Z' fill='%23fff'/%3E%3C/svg%3E%0A");
+    /* transform: rotate(360deg); */
+    animation-name: story_more;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+} 
+@keyframes story_more {
+    0% {transform: rotate(0deg);}
+    100% { transform: rotate(-360deg);}
+}
+@media screen and (max-width:1024px) {
+    .story .tit h2 {
+        font-size: 25px;
+        margin: 50px 0 0 0;
+    }
+    .story .tit p {
+        margin: 10px 0 15px 0;
+    }
+    .story .list ul li a h3 {
+        font-size: 17px;
+    }
+    .story .list ul li a .date {
+        margin: 10px 0 5px 0;
+    }
+    .story .list ul li a .photo .cate {
+        position: absolute;
+        left: 0;
+        top: 0;
+        font-size: 13px;
+        line-height: 25px;
+        width: 100px;
+        height: 25px;
+        padding: 0;
+    }
+    .story .more {
+        margin: 15px;
+    }
+    .story .more a {
+        padding: 5px 27px 5px 17px;
+    }
+    .story .more a::after {
+        right: 11px;
+        top: 6px;
+        width: 15px;
+        height: 15px;
+    }
 }
