@@ -1,0 +1,101 @@
+/* header와 footer처럼 페이지에 공통으로 배치되는 요소의 css */
+
+.skip_nav {
+    position: absolute;
+    left: 0;
+    top: -100px; /* focus가 될때만 나타나야 하기 때문에 위에 숨겨져 있어야 함 */
+    z-index: 999999999999; 
+    width: 100%;
+}
+.skip_nav a {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    background-color: #ED1C24;
+    text-align: center;
+    color: #fff;
+}
+.skip_nav a:focus {
+    top: 100px;
+    /* a에 포커스 되면 올라간 만큼 내려옴 */
+}
+
+header {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    z-index: 100;
+    color: var(--txt-color-white);
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; 
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+header .logo {
+    margin-top: 20px;
+}
+header .logo a {
+    width: 200px;
+    height: 40px;
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    position: relative;
+}
+header .logo a::before {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='214' height='50' viewBox='0 0 214 50' fill='none' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Crect width='213.492' height='50' fill='url(%23pattern0_53_185)'/%3E%3Cdefs%3E%3Cpattern id='pattern0_53_185' patternContentUnits='objectBoundingBox' width='1' height='1'%3E%3Cuse xlink:href='%23image0_53_185' transform='scale(0.00371747 0.015873)'/%3E%3C/pattern%3E%3Cimage id='image0_53_185' width='269' height='63' xlink:href='data:image/png;base64,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'/%3E%3C/defs%3E%3C/svg%3E%0A");
+    content: "";
+}
+header .gnb button {
+    display: none;
+}
+header .gnb .gnb_wrap ul.depth1 {
+    display: flex;
+    text-align: center;
+}
+header .gnb .gnb_wrap ul.depth1 > li {
+    width: 200px;
+    font-size: 20px;
+    position: relative;
+}
+header .gnb .gnb_wrap ul.depth1 > li > a {
+    display: block;
+    line-height: 80px;
+}
+header .gnb .gnb_wrap ul.depth1 > li > a:hover {
+    font-weight: 400;
+}
+header .gnb .gnb_wrap ul.depth2  {
+    position: absolute;
+    left: 0;
+    top: 80px;
+    width: 100%;
+    padding-top: 20px;
+    line-height: 2;
+}
+/* header에 마우스 오버 */
+header.menu_over::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 400px;
+    background-color: #fff;
+    z-index: -1;
+    content: "";
+}
+header .logo a::before 
