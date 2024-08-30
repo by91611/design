@@ -9,11 +9,15 @@
 .visual .swiper .swiper-wrapper {
     position: relative;
 }
+.visual .swiper ul li {
+    height: 100vh;
+}
 .visual .swiper ul li .tit {
     position: absolute;
     left: 10%;
-    top: 30%;
-    color: var(--txt-color-white);
+    top: 35%;
+    color: var(--txt-color-w80);
+    margin-right: 10%;
 }
 .visual .swiper ul li .tit strong {
     font-size: 25px;
@@ -21,4 +25,237 @@
 }
 .visual .swiper ul li .tit h3 {
     font-size: 75px;
+}
+.visual .swiper ul li .tit h3 br {
+    display: none;
+}
+.visual .swiper ul li .photo {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: calc(100% + 110px);
+    height: 100%;
+    overflow: hidden;
+}
+.visual .swiper ul li .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.visual .swiper ul li.swiper-slide-active .photo {
+    animation-name: visual_img;
+    animation-duration: 7s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+@keyframes visual_img {
+    0% { left:0; }
+    100% { left:-100px; }
+}
+.visual .swiper .swiper-pagination {
+    width: auto;
+    display: flex;
+    margin: 10%;
+}
+.visual .swiper .swiper-pagination .swiper-pagination-bullet {
+    width: 400px;
+    height: 1px;
+    border-radius: 0;
+    background-color: var(--txt-color-w60);
+    opacity: 1;
+    margin-right: 24px;
+    position: relative;
+}
+.visual .swiper .swiper-pagination .swiper-pagination-bullet-active::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    color: #fff;
+    content: "";
+    animation-name: visual_count;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards; 
+    animation-timing-function: linear;
+}
+@keyframes visual_count {
+    0% {width: 0;}
+    100% {width: 100%;}
+}
+
+
+@media screen and (max-width:1300px) {
+    .visual .swiper ul li .tit h3 {
+        font-size: 70px;
+        letter-spacing: -0.02em;
+    }
+}
+@media screen and (max-width:1024px) {
+    .visual .swiper ul li .tit strong {
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+    .visual .swiper ul li .tit h3 {
+        font-size: 65px;
+    }
+}
+@media screen and (max-width:768px) {
+    .visual .swiper ul li .tit strong {
+        font-size: 20px;
+    }
+    .visual .swiper ul li .tit h3 {
+        font-size: 55px;
+    }
+    .visual .swiper ul li .tit h3 br {
+        display: block;
+    }
+}
+@media screen and (max-width:495px) {
+    .visual .swiper ul li .tit strong {
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+    .visual .swiper ul li .tit h3 {
+        font-size: 50px;
+    }
+}
+
+.program h2 {
+    font-size: var(--txt-size-tit);
+    margin: var(--margin-tit);
+    text-align: center;
+}
+.program .swiper ul li {
+    display: flex;
+    justify-content: center;
+}
+.program .swiper ul li .photo {
+    font-size: 0;
+    line-height: 0;
+    width: 400px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 25px;
+    margin-left: 100px;
+}
+.program .swiper ul li .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.program .swiper ul li .txt {
+    font-weight: 400;
+    width: 400px;
+    margin: 58px 0 0 100px;
+}
+.program .swiper ul li .txt h3 {
+    font-size: 35px;
+}
+.program .swiper ul li .txt p {
+    font-size: 20px;
+    margin: 10px 0 50px 0;
+}
+.program .swiper ul li .txt a {
+    padding: 0 25px 0 0;
+    position: relative;
+}
+.program .swiper ul li .txt a::after {
+    position: absolute;
+    left: -2px;
+    bottom: -2px;
+    width: 100%;
+    height: 1px;
+    background-color: var(--txt-color-gray);
+    content: "";
+}
+.program .swiper ul li .txt a span {
+    position: relative;
+}
+.program .swiper ul li .txt a span::after {
+    position: absolute;
+    right: -20px;
+    bottom: 2px;
+    width: 13px;
+    height: 13px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='13' height='13' viewBox='0 0 13 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_53_693' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='13' height='13'%3E%3Crect width='13' height='13' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_53_693)'%3E%3Cpath d='M4.33632 11.5419L3.76025 10.9658L8.22589 6.50019L3.76025 2.03456L4.33632 1.4585L9.37801 6.50019L4.33632 11.5419Z' fill='%233D3D3D'/%3E%3C/g%3E%3C/svg%3E%0A");
+    content: "";
+}
+.program .swiper ul li .txt a:hover {
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+.program .swiper ul li .txt a:hover::after {
+    background-color: #3d3d3d;
+}
+.program .swiper ul li .txt a:hover span::after {
+    background-image: url("data:image/svg+xml,%3Csvg width='13' height='13' viewBox='0 0 13 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_118_10' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='13' height='13'%3E%3Crect width='13' height='13' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_118_10)'%3E%3Cpath d='M4.34176 11.7292L3.573 10.9605L8.03335 6.50011L3.573 2.03976L4.34176 1.271L9.57087 6.50011L4.34176 11.7292Z' fill='%231C1B1F'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+.program .btn_prev,
+.program .btn_next {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 30px;
+    height: 30px;
+    font-size: 0;
+    line-height: 0;
+}
+.program .btn_prev {
+    left: 0;
+}
+.program .btn_next {
+    right: 0;
+}
+.program .btn_prev::after,
+.program .btn_next::after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    content: "";
+}
+.program .btn_prev::after {
+    background-image: url("data:image/svg+xml,%3Csvg width='43' height='43' viewBox='0 0 43 43' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='path-1-inside-1_53_623' fill='white'%3E%3Cpath d='M0 21.1421L21.1421 -3.69809e-07L42.2842 21.1421L21.1421 42.2842L0 21.1421Z'/%3E%3C/mask%3E%3Cpath d='M0 21.1421L-0.707107 20.435L-1.41421 21.1421L-0.707107 21.8492L0 21.1421ZM0.707107 21.8492L21.8492 0.707106L20.435 -0.707107L-0.707107 20.435L0.707107 21.8492ZM21.8492 41.5771L0.707107 20.435L-0.707107 21.8492L20.435 42.9913L21.8492 41.5771Z' fill='%233D3D3D' mask='url(%23path-1-inside-1_53_623)'/%3E%3C/svg%3E%0A");
+}
+.program .btn_next::after {
+    background-image: url("data:image/svg+xml,%3Csvg width='43' height='43' viewBox='0 0 43 43' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='path-1-inside-1_53_624' fill='white'%3E%3Cpath d='M42.4976 23.0947L19.7486 42.4973L0.345998 19.7484L23.095 0.345769L42.4976 23.0947Z'/%3E%3C/mask%3E%3Cpath d='M42.4976 23.0947L43.1465 23.8556L43.9073 23.2066L43.2584 22.4458L42.4976 23.0947ZM41.8486 22.3339L19.0997 41.7365L20.3975 43.2582L43.1465 23.8556L41.8486 22.3339ZM22.3341 0.994698L41.7367 23.7437L43.2584 22.4458L23.8558 -0.30316L22.3341 0.994698Z' fill='%233D3D3D' mask='url(%23path-1-inside-1_53_624)'/%3E%3C/svg%3E%0A");
+}
+
+@media screen and (max-width:1024px) {
+    .program h2 {
+        font-size: 55px;
+        margin: 50px 0 25px 0;
+    }
+    .program .swiper ul li {
+        display: block;
+        padding: 0, 10%;
+    }
+    .program .swiper ul li .photo {
+        width: 65%;
+        height: 50%;
+        border-radius: 20px;
+        margin: 0 10%;
+    }
+    .program .swiper ul li .txt {
+        width: auto;
+        margin: 58px 10% 0 10%;
+    }
+    .program .swiper ul li .txt h3 {
+        font-size: 35px;
+    }
+    .program .swiper ul li .txt p {
+        font-size: 20px;
+        margin: 10px 0 50px 0;
+    }
+    .program .swiper ul li .txt a span {
+        text-align: center;
+    }
 }

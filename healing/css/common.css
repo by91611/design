@@ -49,13 +49,14 @@ button:focus {
 
 :root {
     --color-main: #0F1821;
+    --color-main2: #0C318E;
     --txt-color-tit: #1d1d1d;
     --txt-color-txt: #3d3d3d;
     --txt-color-gray: #9d9d9d;
     --txt-color-white: #ededed;
     --txt-color-w80: rgba(255, 255, 255, .8);
     --txt-color-w60: rgba(255, 255, 255, .6);
-    --txt-size-tit: 55px; 
+    --txt-size-tit: 60px; 
     --margin-tit: 100px 0 75px 0;
 }
 

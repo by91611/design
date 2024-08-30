@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/common.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/main.css">
@@ -17,14 +18,14 @@
         <a href="#skip_menu">대메뉴 바로가기</a>
     </div>
     <id class="wrap">
-        <header class="menu_over">
+        <header>
             <h1 class="logo"><a href="#n">생거진천치유의숲</a></h1>
             <nav class="gnb" id="skip_menu">
                 <button class="gnb_open">메뉴열기</button>
                 <div class="gnb_wrap">
                     <ul class="depth1">
                         <li>
-                            <a href="#n"><span>치유의 숲 소개</span></a>
+                            <a href="#n"><span>치유의숲 소개</span></a>
                             <ul class="depth2">
                                 <li><a href="#n">치유의숲 소개</a></li>
                                 <li><a href="#n">찾아오는길</a></li>
@@ -75,30 +76,65 @@
                 <div class="swiper">
                     <ul class="swiper-wrapper"> 
                         <li class="swiper-slide bg1">
-                            <img src="images/main/visual_bg1.png">
+                            <div class="photo"><img src="images/main/visual_bg1.png" alt="숲 배경사진"></div>
                             <div class="tit">
                                 <strong>Healing Forest</strong>
-                                <h3>삶에 숲을 더하는 일상치유 공간</h3>
+                                <h3>삶에 숲을 더하는 <br> 일상치유 공간</h3>
                             </div>
                         </li>
                         <li class="swiper-slide bg2">
-                            <img src="images/main/visual_bg2.png">
+                            <div class="photo"><img src="images/main/visual_bg2.png" alt="숲 배경사진"></div>
                             <div class="tit">
                                 <strong>Healing Travle</strong>
-                                <h3>여유를 느끼다, 나를 되찾다</h3>
+                                <h3>여유를 느끼다, <br> 나를 되찾다</h3>
                             </div>
                         </li>
                         <li class="swiper-slide bg3">
-                            <img src="images/main/visual_bg3.png">
+                            <div class="photo"><img src="images/main/visual_bg3.png" alt=""></div>
                             <div class="tit">
                                 <strong>Rest in the Forest</strong>
-                                <h3>따스한 위로와 휴식의 공간</h3>
+                                <h3>따스한 위로와 <br> 휴식의 공간</h3>
                             </div>
                         </li>
                     </ul>
+                    <div class="swiper-pagination"></div>
                 </div>
             </section>
-            <section class="program"></section>
+            <section class="program">
+                <div class="wrapper">
+                    <h2>Program</h2>
+                    <div class="swiper"> 
+                        <ul class="swiper-wrapper"> 
+                            <li class="swiper-slide pro1">
+                                <div class="photo"><img src="images/main/program1.png" alt="프로그램 사진"></div>
+                                <div class="txt">
+                                    <h3>오감힐링 오행비채</h3>
+                                    <p>오감으로 치유하고 오행으로 건강을 유지하는 치유 프로그램</p>
+                                    <a href="#n"><span>view more</span></a>
+                                </div>
+                            </li> 
+                            <li class="swiper-slide pro2">
+                                <div class="photo"><img src="images/main/program2.png" alt="프로그램 사진"></div>
+                                <div class="txt">
+                                    <h3>향차욕(Tea Bath)</h3>
+                                    <p>차를 마심으로써 몸 안을 씻는 심신치유 프로그램</p>
+                                    <a href="#n"><span>view more</span></a>
+                                </div>
+                            </li> 
+                            <li class="swiper-slide pro3">
+                                <div class="photo"><img src="images/main/program3.png" alt="프로그램 사진"></div>
+                                <div class="txt">
+                                    <h3>허브식초 만들기</h3>
+                                    <p>힐링정원에서 직접 기른 허브를 발효시켜 건강한 식초 만들기</p>
+                                    <a href="#n"><span>view more</span></a>
+                                </div>
+                            </li> 
+                        </ul>
+                        <button class="btn_prev">이전버튼</button>
+                        <button class="btn_next">다음버튼</button>
+                    </div>
+                </div>
+            </section>
             <section class="gallery"></section>
             <section class="notice"></section>
             <section class="quick"></section>
