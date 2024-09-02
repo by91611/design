@@ -52,21 +52,20 @@
     0% { left:0; }
     100% { left:-100px; }
 }
-.visual .swiper .swiper-pagination {
+.visual .swiper .paging {
     width: auto;
     display: flex;
-    margin: 10%;
 }
-.visual .swiper .swiper-pagination .swiper-pagination-bullet {
-    width: 400px;
-    height: 1px;
+.visual .swiper .paging .swiper-pagination-bullet {
+    width: 33.3%;
+    height: 2px;
     border-radius: 0;
-    background-color: var(--txt-color-w60);
+    background-color: rgba(217, 217, 217, 0.3);
     opacity: 1;
     margin-right: 24px;
     position: relative;
 }
-.visual .swiper .swiper-pagination .swiper-pagination-bullet-active::before {
+.visual .swiper .paging .swiper-pagination-bullet-active::before {
     position: absolute;
     left: 0;
     top: 0;
@@ -92,6 +91,9 @@
     }
 }
 @media screen and (max-width:1024px) {
+    .visual .swiper ul li {
+        height: 750px;
+    }
     .visual .swiper ul li .tit strong {
         font-size: 22px;
         margin-bottom: 10px;
@@ -101,6 +103,9 @@
     }
 }
 @media screen and (max-width:768px) {
+    .visual .swiper ul li {
+        height: 500px;
+    }
     .visual .swiper ul li .tit strong {
         font-size: 20px;
     }
@@ -156,11 +161,11 @@
     font-size: 20px;
     margin: 10px 0 50px 0;
 }
-.program .swiper ul li .txt a {
+.program .swiper ul li .txt .more a {
     padding: 0 25px 0 0;
     position: relative;
 }
-.program .swiper ul li .txt a::after {
+.program .swiper ul li .txt .more a::after {
     position: absolute;
     left: -2px;
     bottom: -2px;
@@ -169,10 +174,10 @@
     background-color: var(--txt-color-gray);
     content: "";
 }
-.program .swiper ul li .txt a span {
+.program .swiper ul li .txt .more a span {
     position: relative;
 }
-.program .swiper ul li .txt a span::after {
+.program .swiper ul li .txt .more a span::after {
     position: absolute;
     right: -20px;
     bottom: 2px;
@@ -184,18 +189,17 @@
     background-image: url("data:image/svg+xml,%3Csvg width='13' height='13' viewBox='0 0 13 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_53_693' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='13' height='13'%3E%3Crect width='13' height='13' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_53_693)'%3E%3Cpath d='M4.33632 11.5419L3.76025 10.9658L8.22589 6.50019L3.76025 2.03456L4.33632 1.4585L9.37801 6.50019L4.33632 11.5419Z' fill='%233D3D3D'/%3E%3C/g%3E%3C/svg%3E%0A");
     content: "";
 }
-.program .swiper ul li .txt a:hover {
+.program .swiper ul li .txt .more a:hover {
     font-weight: 700;
     letter-spacing: -0.02em;
 }
-.program .swiper ul li .txt a:hover::after {
+.program .swiper ul li .txt .more a:hover::after {
     background-color: #3d3d3d;
 }
 .program .swiper ul li .txt a:hover span::after {
-    background-image: url("data:image/svg+xml,%3Csvg width='13' height='13' viewBox='0 0 13 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_118_10' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='13' height='13'%3E%3Crect width='13' height='13' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_118_10)'%3E%3Cpath d='M4.34176 11.7292L3.573 10.9605L8.03335 6.50011L3.573 2.03976L4.34176 1.271L9.57087 6.50011L4.34176 11.7292Z' fill='%231C1B1F'/%3E%3C/g%3E%3C/svg%3E%0A");
+    background-image: url("data:image/svg+xml,%3Csvg width='13' height='13' viewBox='0 0 13 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_129_19' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='13' height='13'%3E%3Crect width='13' height='13' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_129_19)'%3E%3Cpath d='M4.34696 11.9168L3.3855 10.9554L7.84071 6.50016L3.3855 2.04495L4.34696 1.0835L9.76362 6.50016L4.34696 11.9168Z' fill='%233D3D3D'/%3E%3C/g%3E%3C/svg%3E%0A");
 }
-.program .btn_prev,
-.program .btn_next {
+.program button {
     position: absolute;
     top: 50%;
     transform: translate(0, -50%);
@@ -204,14 +208,13 @@
     font-size: 0;
     line-height: 0;
 }
-.program .btn_prev {
+.program button.swiper-button-prev {
     left: 0;
 }
-.program .btn_next {
+.program button.swiper-button-next {
     right: 0;
 }
-.program .btn_prev::after,
-.program .btn_next::after {
+.program button::after {
     position: absolute;
     left: 0;
     top: 0;
@@ -222,10 +225,10 @@
     background-size: contain;
     content: "";
 }
-.program .btn_prev::after {
+.program .swiper-button-prev::after {
     background-image: url("data:image/svg+xml,%3Csvg width='43' height='43' viewBox='0 0 43 43' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='path-1-inside-1_53_623' fill='white'%3E%3Cpath d='M0 21.1421L21.1421 -3.69809e-07L42.2842 21.1421L21.1421 42.2842L0 21.1421Z'/%3E%3C/mask%3E%3Cpath d='M0 21.1421L-0.707107 20.435L-1.41421 21.1421L-0.707107 21.8492L0 21.1421ZM0.707107 21.8492L21.8492 0.707106L20.435 -0.707107L-0.707107 20.435L0.707107 21.8492ZM21.8492 41.5771L0.707107 20.435L-0.707107 21.8492L20.435 42.9913L21.8492 41.5771Z' fill='%233D3D3D' mask='url(%23path-1-inside-1_53_623)'/%3E%3C/svg%3E%0A");
 }
-.program .btn_next::after {
+.program .swiper-button-next::after {
     background-image: url("data:image/svg+xml,%3Csvg width='43' height='43' viewBox='0 0 43 43' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='path-1-inside-1_53_624' fill='white'%3E%3Cpath d='M42.4976 23.0947L19.7486 42.4973L0.345998 19.7484L23.095 0.345769L42.4976 23.0947Z'/%3E%3C/mask%3E%3Cpath d='M42.4976 23.0947L43.1465 23.8556L43.9073 23.2066L43.2584 22.4458L42.4976 23.0947ZM41.8486 22.3339L19.0997 41.7365L20.3975 43.2582L43.1465 23.8556L41.8486 22.3339ZM22.3341 0.994698L41.7367 23.7437L43.2584 22.4458L23.8558 -0.30316L22.3341 0.994698Z' fill='%233D3D3D' mask='url(%23path-1-inside-1_53_624)'/%3E%3C/svg%3E%0A");
 }
 
@@ -236,26 +239,292 @@
     }
     .program .swiper ul li {
         display: block;
-        padding: 0, 10%;
     }
     .program .swiper ul li .photo {
-        width: 65%;
-        height: 50%;
+        width: 60%;
+        height: 30%;
         border-radius: 20px;
-        margin: 0 10%;
+        margin: 0 auto;
     }
     .program .swiper ul li .txt {
-        width: auto;
-        margin: 58px 10% 0 10%;
+        width: 60%;
+        height: 30%;
+        margin: 0 auto;
     }
     .program .swiper ul li .txt h3 {
-        font-size: 35px;
+        font-size: 25px;
+        margin-top: 30px;
     }
     .program .swiper ul li .txt p {
-        font-size: 20px;
+        font-size: 16px;
         margin: 10px 0 50px 0;
     }
-    .program .swiper ul li .txt a span {
+    .program .swiper ul li .txt .more a span {
+        font-size: 16px;
         text-align: center;
     }
 }
+@media screen and (max-width:768px) {
+    .program h2 {
+        font-size: 35px;
+    }
+    .program .swiper ul li .txt h3 {
+        font-size: 20px;
+    }
+    .program .swiper ul li .txt p {
+        font-size: 13px;
+        margin: 10px 0 25px 0;
+    }
+    .program .swiper ul li .txt .more a span {
+        font-size: 13px;
+    }
+    .program .swiper ul li .txt .more a span::after {
+        width: 10px;
+        height: 10px;
+    }
+    .program button {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+.gallery {
+    padding: 100px 0;
+    background-color: var(--color-main);
+    color: #fff;
+    margin-top: 100px;
+}
+.gallery h2 {
+    font-size: var(--txt-size-tit);
+    text-align: center;
+    margin-bottom: 75px;
+}
+.gallery .swiper ul li {
+    width: 19%;
+}
+.gallery .swiper_top ul li {
+    animation-name: swiper_top_loop;
+    animation-duration: 60s;
+    animation-iteration-count: infinite; 
+    animation-timing-function: linear;
+}
+@keyframes swiper_top_loop {
+    0% {transform: translate(0, 0);}
+    100% {transform: translate(1053%, 0);} 
+}
+.gallery .swiper_bottom ul li {
+    animation-name: swiper_bottom_loop;
+    animation-duration: 60s;
+    animation-iteration-count: infinite; 
+    animation-timing-function: linear;
+}
+@keyframes swiper_bottom_loop {
+    0% {transform: translate(0, 0);}
+    100% {transform: translate(-1053%, 0);} 
+}
+.gallery .swiper ul li a img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.gallery .swiper_bottom {
+    margin: 30px 0 50px 0;
+}
+.gallery .more {
+    text-align: center;
+}
+.gallery .more a {
+    padding: 0 25px 0 0;
+    position: relative;
+}
+.gallery .more a::after {
+    position: absolute;
+    left: -2px;
+    bottom: -2px;
+    width: 100%;
+    height: 1px;
+    background-color: var(--txt-color-gray);
+    content: "";
+}
+.gallery .more a span {
+    position: relative;
+}
+.gallery .more a span::after {
+    position: absolute;
+    right: -20px;
+    bottom: 2px;
+    width: 13px;
+    height: 13px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='13' height='13' viewBox='0 0 13 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_53_693' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='13' height='13'%3E%3Crect width='13' height='13' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_53_693)'%3E%3Cpath d='M4.33632 11.5419L3.76025 10.9658L8.22589 6.50019L3.76025 2.03456L4.33632 1.4585L9.37801 6.50019L4.33632 11.5419Z' fill='%23fff'/%3E%3C/g%3E%3C/svg%3E%0A");
+    content: "";
+}
+.gallery .more a:hover {
+    font-weight: 400;
+    letter-spacing: -0.02em;
+}
+.gallery .more a:hover::after {
+    background-color: #fff;
+}
+.gallery .more a:hover span::after {
+    background-image: url("data:image/svg+xml,%3Csvg width='13' height='13' viewBox='0 0 13 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_129_13' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='13' height='13'%3E%3Crect width='13' height='13' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_129_13)'%3E%3Cpath d='M4.34696 11.9168L3.3855 10.9554L7.84071 6.50016L3.3855 2.04495L4.34696 1.0835L9.76362 6.50016L4.34696 11.9168Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+@media screen and (max-width:1024px) {
+    .gallery {
+        padding: 50px 0;
+        margin-top: 50px;
+    }
+    .gallery h2 {
+        font-size: 55px;
+        margin-bottom: 50px;;
+    }
+}
+@media screen and (max-width:768px) {
+    .gallery h2 {
+        font-size: 35px;
+        margin-bottom: 25px;
+    }
+    .gallery .swiper ul li {
+        width: 215px;
+        height: 173px;
+    }
+    .gallery .swiper_bottom {
+        margin: 18px 0 25px 0;
+    }
+}
+
+.notice .wrapper {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+.notice .tit {
+    margin-right: 30px;
+}
+.notice .tit h2 {
+    font-size: var(--txt-size-tit);
+    margin: var(--margin-tit);
+}
+.notice .list {
+    width: 832px;
+    margin-top: 100px;
+    font-weight: 400;
+}
+.notice .list ul li {
+    border-bottom: 1px solid var(--txt-color-gray);
+}
+.notice .list ul li:first-child {
+    border-top: 1px solid var(--txt-color-txt);
+}
+.notice .list ul li a {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px;
+    line-height: 70px;
+}
+.notice .list ul li a h3 {
+    color: var(--txt-color-tit);
+}
+.notice .list ul li a span {
+    font-size: 13px;
+}
+.notice .list ul li a:hover h3 {
+    font-weight: 700;
+}
+.notice .more {
+    position: absolute;
+    left: 0;
+    top: 200px;
+    font-weight: 400;
+    padding: 0 25px 0 0;
+}
+.notice .more a::after {
+    position: absolute;
+    left: -2px;
+    bottom: -2px;
+    width: 100%;
+    height: 1px;
+    background-color: var(--txt-color-gray);
+    content: "";
+}
+.notice .more a span {
+    position: relative;
+}
+.notice .more a span::after {
+    position: absolute;
+    right: -20px;
+    bottom: 2px;
+    width: 13px;
+    height: 13px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='13' height='13' viewBox='0 0 13 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_53_693' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='13' height='13'%3E%3Crect width='13' height='13' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_53_693)'%3E%3Cpath d='M4.33632 11.5419L3.76025 10.9658L8.22589 6.50019L3.76025 2.03456L4.33632 1.4585L9.37801 6.50019L4.33632 11.5419Z' fill='%233D3D3D'/%3E%3C/g%3E%3C/svg%3E%0A");
+    content: "";
+}
+.notice .more a:hover {
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+.notice .more a:hover::after {
+    background-color: #3d3d3d;
+}
+.notice .more a:hover span::after {
+    background-image: url("data:image/svg+xml,%3Csvg width='13' height='13' viewBox='0 0 13 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_129_19' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='13' height='13'%3E%3Crect width='13' height='13' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_129_19)'%3E%3Cpath d='M4.34696 11.9168L3.3855 10.9554L7.84071 6.50016L3.3855 2.04495L4.34696 1.0835L9.76362 6.50016L4.34696 11.9168Z' fill='%233D3D3D'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+@media screen and (max-width:1024px) {
+    .notice .wrapper {
+        display: block;
+    }
+    .notice .tit {
+        margin-right: 0;
+        text-align: center;
+    }
+    .notice .tit h2 {
+        font-size: 55px;
+        margin: 50px 0 25px 0;
+    }
+    .notice .list {
+        width: auto;
+        height: auto;
+        margin-top: 25px;
+    }
+    .notice .list ul li a {
+        display: block;
+        padding: 0 15px;
+        line-height: 1.4;
+    }
+    .notice .list ul li a h3 {
+        font-size: 16px;
+        padding: 10px 0 15px 0;
+    }
+    .notice .list ul li a span {
+        display: block;
+        text-align: right;
+        margin-bottom: 10px;
+    }
+    .notice .more {
+        position: relative;
+        left: auto;
+        top: auto;
+        text-align: center;
+        margin-top: 30px;
+    }
+    .notice .more a {
+        position: relative;
+        padding-right: 25px;
+    }
+}
+@media screen and (max-width:768px) {
+    .notice .tit h2 {
+        font-size: 35px;
+    }
+    .notice .more a span::after {
+        width: 10px;
+        height: 10px;
+    }
+}
+
+
