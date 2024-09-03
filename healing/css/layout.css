@@ -358,12 +358,12 @@ footer .inner .f_nav ul li a em {
     font-weight: 400;
 }
 footer .inner .f_info {
-    display: flex;
     margin: 20px 0 30px 0;
 }
 footer .inner .f_info address,
 footer .inner .f_info span {
     display: inline-block;
+    margin-right: 16px;
 }
 @media screen and (max-width:1024px) {
     footer {
