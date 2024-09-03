@@ -396,6 +396,9 @@
     }
 }
 
+.notice {
+    margin-top: 150px;
+}
 .notice .wrapper {
     display: flex;
     justify-content: space-between;
@@ -406,11 +409,10 @@
 }
 .notice .tit h2 {
     font-size: var(--txt-size-tit);
-    margin: var(--margin-tit);
+    margin: 0;
 }
 .notice .list {
     width: 832px;
-    margin-top: 150px;
     font-weight: 400;
 }
 .notice .list ul li {
@@ -437,7 +439,7 @@
 .notice .more {
     position: absolute;
     left: 0;
-    top: 250px;
+    top: 100px;
     font-weight: 400;
 }
 .notice .more a {
