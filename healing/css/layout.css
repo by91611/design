@@ -268,9 +268,10 @@ header .logo a::before {
 footer {
     background: url(../images/common/f_bg1.png) center center / cover;
     padding: 0 0 75px 0;
-    color: #fff;
+    color: var(--txt-color-w80);
     margin-top: 150px;
     position: relative;
+    font-weight: 400;
 }
 footer .quick {
     width: 100%;
@@ -307,7 +308,7 @@ footer .quick ul li a {
     text-align: center;
 }
 footer .quick ul li:hover a {
-    font-weight: 400;
+    font-weight: 700;
 }
 footer .quick ul li a span {
     position: relative;
@@ -355,7 +356,7 @@ footer .inner .f_nav ul li {
     margin-right: 16px;
 }
 footer .inner .f_nav ul li a em {
-    font-weight: 400;
+    font-weight: 700;
 }
 footer .inner .f_info {
     margin: 20px 0 30px 0;

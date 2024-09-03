@@ -205,7 +205,7 @@
     letter-spacing: -0.02em;
 }
 .program .swiper ul li .txt .more a:hover::after {
-    background-color: #3d3d3d;
+    background-color: #1d1d1d;
 }
 .program .swiper ul li .txt .more a:hover span::after {
     background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_146_21' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='24' height='24'%3E%3Crect width='24' height='24' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_146_21)'%3E%3Cpath d='M15 19L13.575 17.6L18.175 13H2V11H18.175L13.6 6.4L15 5L22 12L15 19Z' fill='%231C1B1F'/%3E%3C/g%3E%3C/svg%3E%0A");
@@ -472,7 +472,7 @@
     letter-spacing: -0.02em;
 }
 .notice .more a:hover::after {
-    background-color: #3d3d3d;
+    background-color: #1d1d1d;
 }
 .notice .more a:hover span::after {
     background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_146_21' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='24' height='24'%3E%3Crect width='24' height='24' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_146_21)'%3E%3Cpath d='M15 19L13.575 17.6L18.175 13H2V11H18.175L13.6 6.4L15 5L22 12L15 19Z' fill='%231C1B1F'/%3E%3C/g%3E%3C/svg%3E%0A");
