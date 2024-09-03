@@ -57,7 +57,7 @@ button:focus {
     --txt-color-w80: rgba(255, 255, 255, .8);
     --txt-color-w60: rgba(255, 255, 255, .6);
     --txt-size-tit: 60px; 
-    --margin-tit: 100px 0 75px 0;
+    --margin-tit: 150px 0 75px 0;
 }
 
 @media screen and (max-width:768px) {

@@ -4,7 +4,7 @@ $(document).ready(function(){
 		effect: "fade",
 	
 		autoplay: {  /* 팝업 자동 실행 */
-			delay: 5000,
+			delay: 6000,
 			disableOnInteraction: true,
 		},
 
@@ -32,7 +32,7 @@ $(document).ready(function(){
 	const gallery_swiper_top = new Swiper('.gallery .swiper_top', { /* 팝업을 감싼는 요소의 class명 */
 
 		slidesPerView: "auto", /* li의 넓이 비율로 안함 - css에서 준 넓이대로 함 */
-		spaceBetween: 24, /* li와 li사이 - 제일 작은 여백 */
+		spaceBetween: 16, /* li와 li사이 - 제일 작은 여백 */
 		breakpoints: {
 			768: {  /* 640px 이상이 되면 적용 */
 				spaceBetween: 16, 
@@ -43,12 +43,18 @@ $(document).ready(function(){
 		},
 		centeredSlides: false, /* 팝업을 화면에 가운데 정렬(가운데 1번이 옴) */
 		loop: true,  /* 마지막 팝업에서 첫번째 팝업으로 자연스럽게 넘기기 */
+
+		autoplay: {  /* 팝업 자동 실행 */
+			delay: 0,
+			disableOnInteraction: false,
+		},
+		speed: 10000,
 	});
 
 	const gallery_swiper_bottom = new Swiper('.gallery .swiper_bottom', { /* 팝업을 감싼는 요소의 class명 */
 
 		slidesPerView: "auto", /* li의 넓이 비율로 안함 - css에서 준 넓이대로 함 */
-		spaceBetween: 24, /* li와 li사이 - 제일 작은 여백 */
+		spaceBetween: 16, /* li와 li사이 - 제일 작은 여백 */
 		breakpoints: {
 			768: {  /* 640px 이상이 되면 적용 */
 				spaceBetween: 16, 
@@ -59,6 +65,11 @@ $(document).ready(function(){
 		},
 		centeredSlides: false, /* 팝업을 화면에 가운데 정렬(가운데 1번이 옴) */
 		loop: true,  /* 마지막 팝업에서 첫번째 팝업으로 자연스럽게 넘기기 */
+		autoplay: {  /* 팝업 자동 실행 */
+			delay: 0,
+			disableOnInteraction: false,
+		},
+		speed: 10000,
 	});
 	
 })
