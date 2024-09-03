@@ -81,7 +81,7 @@
     background-color: var(--txt-color-w60);
     content: "";
     animation-name: visual_count;
-    animation-duration: 5s;
+    animation-duration: 6s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards; 
     animation-timing-function: linear;
