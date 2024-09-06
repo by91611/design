@@ -1,0 +1,72 @@
+html, body {
+    font-family: 'GmarketSans', "Malgun Gothic", "맑은 고딕", Dotum, 돋움, Helvetica, "Apple SD Gothic Neo", "애플 SD 산돌고딕 Neo", sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    letter-spacing: 0; 
+    line-height: 1.4; 
+    color: #3d3d3d; 
+    word-break: keep-all;
+    word-wrap: break-word; 
+}
+#wrap {
+    min-width: 1260px;
+    overflow: hidden;
+}
+.wrapper {
+    width: 1260px; 
+    margin: 0 auto; 
+}
+@media screen and (max-width:1300px) { 
+    #wrap {
+        min-width: 100%; 
+    }    
+    .wrapper {
+        width: auto;
+        margin: 0 20px; 
+    }
+} 
+@media screen and (max-width:1024px) { /* 태블릿 반응형 */
+    html, body {
+        font-size: 14px;
+    }
+}
+@media screen and (max-width:768px) { /* 모바일 반응형 */
+    html, body {
+        font-size: 13px;
+    }
+} 
+
+/* 클릭하는 요소 a button - focus가 되었을 때 스타일 변경 */
+/* a:focus,
+button:focus {
+    outline: 3px dashed #ED1C24;
+} */
+
+::selection {
+    background-color: #1F9EA5;
+    color: #fff;
+}
+
+:root {
+    --color-main: #04244A;
+    --color-main2: #D2ECED;
+    --color-main3: #E8A107;
+    --txt-color-tit: #1d1d1d;
+    --txt-color-txt: #3d3d3d;
+    --txt-color-gray: #d9d9d9;
+    --txt-color-white: #fff;
+    --txt-color-w80: rgba(255, 255, 255, .8);
+    --txt-color-w60: rgba(255, 255, 255, .6);
+    --txt-size-tit: 55px; 
+}
+
+@media screen and (max-width:768px) {
+    :root {
+        --txt-size-tit: 25px; 
+    }
+}
+@media screen and (max-width:495px) {
+    :root {
+
+    }
+}

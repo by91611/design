@@ -1,0 +1,14 @@
+@import url(default.css);
+@import url(fonts.css);
+@import url(common.css);
+@import url(layout.css);
+
+.visual {
+    background: url(../images/main/visual01.png) no-repeat center center / cover;
+    height: 800px;
+}
+@media screen and (max-width:1024px) {
+    .visual {
+        height: 400px;
+    }
+}
