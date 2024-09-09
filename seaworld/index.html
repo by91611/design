@@ -7,6 +7,8 @@
     <script src="js/main.js"></script>
     <script src="js/common.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
@@ -18,7 +20,7 @@
         <a href="#skip_menu">대메뉴 바로가기</a>
     </div>
     <div id="wrap">
-        <header class="menu_open">
+        <header>
             <h1 class="logo"><a href="index.html">로고</a></h1>
             <div class="gnb" id="skip_menu">
                 <button class="gnb_open">메뉴열기</button>
@@ -43,7 +45,7 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="#n"><span>프로그램</a>
+                            <a href="#n"><span>프로그램</span></a>
                             <ul class="depth2">
                                 <li><a href="#n">체험정보</a></li>
                                 <li><a href="#n">생태설명회</a></li>
@@ -73,14 +75,9 @@
                 </div>
             </div>
             <div class="tnb">
-                <div class="book">
-                    <a href="https://booking.naver.com/booking/5/bizes/16349?area=plt" target="_blank" title="새창 열림" class="naver"><span>예약</span></a>
-                </div>
-                <div class="sotre">
-                    <a href="https://smartstore.naver.com/sevenseaskorea/category/10084f5ac0e645df89d7b91cde2b4078?cp=1" target="_blank" title="새창 열림" class="store"><span>스토어</span></a>
-                </div>
-                <div class="lang">
-                    <a href="#n"><span>KOR</span></a>
+                <a href="https://booking.naver.com/booking/5/bizes/16349?area=plt" target="_blank" title="새창 열림" class="book">예약</a>
+                <a href="https://smartstore.naver.com/sevenseaskorea/category/10084f5ac0e645df89d7b91cde2b4078?cp=1" target="_blank" title="새창 열림" class="store">스토어</a>
+                <a href="#n" class="lang">EN</a>
             </div>
         </header>
         <main class="container" id="skip_contents">
@@ -97,16 +94,20 @@
                                     <li><span>운영시간</span></li>
                                     <li>10:00 ~ 18:00</li>
                                 </ul>
+                            </li>
                             <li class="fee">
                                 <ul class="depth2">
                                     <li><span>이용요금</span></li>
                                     <li>대인 29,000원</li>
                                     <li>소인 24,000원</li>
                                 </ul>
+                            </li>
                             <li class="call">
                                 <ul class="depth2">
                                     <li><span>이용문의</span></li>
                                     <li>055-682-1551</li>
+                                </ul>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -124,11 +125,31 @@
                     <div class="more"><a href="#n"><span>자세히보기</span></a></div>
                 </div>
             </section>
-            <section class="cmapaine"></section>
+            <section class="cmapaine">
+                <div class="wrapper">
+                    <h2>Campaine</h2>
+                    <div class="photo"><img src="images/main/cam01.jpg" alt="돌고래 사진"></div>
+                    <div data-aos="fade-right" class="txt">
+                        <ul>
+                            <li><span>수족관 시설은</span><img src="images/main/cam02.png"></li>
+                            <li div data-aos="fade-right" data-aos-delay="500"><span>다양한 해양동물의</span><img src="images/main/cam03.png"><span>중요성과</span></li> 
+                            <li div data-aos="fade-right" data-aos-delay="1000"><span>자연의</span><img src="images/main/cam04.png"><span>소중함을 배우는 공간입니다.</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slogan">MAKE YOU SMILE WITH DOLPHIN MAKE YOU SMILE WITH DOLPHIN</div>
+            </section>
             <section class="program"></section>
             <section class="notice"></section>
         </main>
         <footer></footer>
     </div>
+    <script>
+        AOS.init({
+        offset: 100,
+        duration: 500, 
+        easing: 'ease', 
+        });
+    </script>
 </body>
 </html>
