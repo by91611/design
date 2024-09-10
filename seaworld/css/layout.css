@@ -192,7 +192,7 @@ header.fixed .tnb a.lang::after {
     }
     /* ul.depth1 > li에 on클래스 추가 */
     header.menu_over .gnb .gnb_wrap ul.depth1 > li.on > a {
-        color: #1F9EA5;
+        color: var(--color-main4);
         font-weight: 700;
     }
     header.menu_over .gnb .gnb_wrap ul.depth1 > li.on > a > span {
