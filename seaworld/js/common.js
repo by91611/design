@@ -94,4 +94,19 @@ $(document).ready(function(){
         /* 하단 콘텐츠 스크롤 금지 해제 */
         $("html, body").css({overflow : "visible", height : "auto"}).unbind('scroll touchmove mousewheel');
     })
+
+    $('footer .family button.family_open').on('click', function(){
+        $('footer .family').addClass('open')
+        $('footer .family ul').slideDown()
+    })
+    $('footer .family button.family_colse').on('click', function(){
+        $('footer .family').removeClass('open')
+        $('footer .family ul').slideUp()
+    })
+
+    $('footer .top').on('click', function(){
+        $('html, body').animate({
+            scrollTop : 0
+        }, 500)
+    })
 })
