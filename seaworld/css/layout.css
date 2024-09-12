@@ -209,6 +209,7 @@ header.fixed .tnb a.lang::after {
         content: "";
     }
 }
+
 @media screen and (max-width:1300px) {
     header .gnb .gnb_wrap ul.depth1 > li {
         width: 130px;

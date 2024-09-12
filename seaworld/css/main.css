@@ -31,6 +31,7 @@
     color: var(--txt-color-w80);
     text-align: center;
     padding: 0 20px;
+    font-weight: 100;
 }
 .visual .info ul.depth1 {
     display: flex;
@@ -71,6 +72,7 @@
     justify-content: center;
 }
 .visual .info > ul.depth1 > li > ul.depth2 > li > span {
+    font-weight: 400;
     padding-right: 30px;
     position: relative;
 }
@@ -88,7 +90,7 @@
 
 @media screen and (max-width:1024px) {
     .visual {
-        height: 400px;
+        height: 500px;
     }
     .visual .tit {
         text-align: center;
@@ -390,7 +392,7 @@
         margin-top: 50px;
     }
     .Campaine .txt ul  {
-        gap: 5px;
+        gap: 0;
     }
     .Campaine .txt ul li {
         font-size: 4vh;
@@ -403,7 +405,7 @@
         font-size: 50px;
     }    
     .Campaine .txt img {
-        margin: 5px;
+        margin: 0;
     }
     @keyframes rolling {
         0% { transform:translate(0, 0) }
