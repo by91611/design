@@ -28,7 +28,7 @@
     height: 65px;
     background-color: rgba(29, 29, 29, 0.5);
     backdrop-filter: blur(10px);
-    color: var(--txt-color-w80);
+    color: var(--txt-color-white);
     text-align: center;
     padding: 0 20px;
     font-weight: 100;
