@@ -2,7 +2,7 @@ $(document).ready(function(){
 
 	let program_active;
 	let program_list = $('.program .tab ul li')
-	let program_detail = '.program .tab_detail ul li'
+	let program_detail = '.program .tab_detail .detail_list .list'
 
 	program_list.on('click', function(){
 		program_list.attr('aria-selected', 'false')
@@ -11,7 +11,7 @@ $(document).ready(function(){
 		
 		$(program_detail).removeClass('on')
 		$(program_detail + '[aria-labelledby="'+ program_active +'"]').addClass('on')
-		//.program .tab_detail ul li[aria-labelledby="tab_01"]
+		//.program .tab_detail .detail_list .list[aria-labelledby="tab_01"]
     })
 
 	const notice_swiper = new Swiper('.notice .swiper', {
