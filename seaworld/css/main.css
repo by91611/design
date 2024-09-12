@@ -181,12 +181,10 @@
     position: absolute;
     left: 0;
     bottom: 0;
-    width: 130px;
 }
 .about .more a {
     display: block;
-    height: 45px;
-    padding: 15px 0 0 20px;
+    padding: 14px 37px 14px 20px;
     line-height: 1;
     border: 1px solid var(--txt-color-gray);
     border-radius: 25px;
@@ -239,18 +237,22 @@
     }
     .about .more {
         position: relative;
-        width: 112px;
         margin: 20px auto;
         text-align: center;
     }
     .about .more a {
-        display: block;
-        height: 34px;
-        padding: 11px 13px 0 0;
+        display: inline-block;
+        padding: 11px 30px 11px 15px;
         line-height: 1;
         border: 1px solid var(--txt-color-gray);
         border-radius: 25px;
         text-align: center;
+    }
+    .about .more a span::after {
+        right: -20px;
+        top: -2px;
+        width: 17px;
+        height: 17px;
     }
 }
 @media screen and (max-width:768px) {
@@ -730,6 +732,7 @@
     left: 0;
     bottom: 0;
     display: flex;
+    align-items: center;
     gap: 5px;
 }
 .notice .btn_wrap button {
@@ -762,10 +765,8 @@
 .notice .btn_wrap a {
     display: inline-block;
     border: 1px solid #B3B3B3;
-    width: 130px;
-    height: 40px;
     border-radius: 25px;
-    padding: 10px 30px 10px 20px;
+    padding: 10px 37px 10px 20px;
 }
 .notice .btn_wrap a span {
     position: relative;
@@ -844,7 +845,6 @@
         padding: 9px 30px 7px 10px;
         border-radius: 25px;
         text-align: center;
-        width: 130px;
         margin: 30px auto;
     }
     .notice .btn_wrap a span::after {
