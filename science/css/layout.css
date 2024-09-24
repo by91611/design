@@ -26,6 +26,7 @@ header.fixed {
     position: fixed;
     width: 100%;
     box-shadow: 0 2px 5px rgba(211, 211, 211, 0.5);
+    z-index: 10;
 }
 header .header_top {
     height: 30px;
