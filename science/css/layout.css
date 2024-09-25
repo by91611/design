@@ -417,7 +417,7 @@ header .header_bottom .logo a::before {
     height: 33px;
 }
 
-@media screen and (max-width:1024px) {
+@media screen and (max-width:1300px) {
     .quick {
         top: 90%;
     }
