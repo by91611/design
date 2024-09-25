@@ -632,9 +632,6 @@
     border: 1px solid var(--txt-color-gray2);
     border-radius: 20px;
 }
-.youtube .swiper ul li a {
-    height: 338px;
-}
 .youtube .swiper ul li a .photo {
     width: 100%;
     height: 167px;
