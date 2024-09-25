@@ -28,7 +28,6 @@
     .visual  h2 {
         font-size: 22px;
         padding-top: 230px;
-        font-weight: 400;
     }
 }
 
@@ -238,7 +237,7 @@
 }
 .program .swiper .swiper-slide a {
     display: block;
-    height: 236px;
+    height: 230px;
     padding: 30px 20px 20px 20px;
     background-color: #fff;
     border-radius: 20px;
@@ -289,6 +288,7 @@
 .program .swiper .swiper-slide .txt .time {
     display: flex;
     position: relative;
+    padding-bottom: 5px;
 }
 .program .swiper .swiper-slide .txt ul li:first-child {
     color: var(--txt-color-gray1);
@@ -343,7 +343,7 @@
     top: 0;
 }
 .program .control .more a {
-    padding-left: 20px;
+    padding: 0 10px 0 20px;
 }
 .program .control .more a span {
     position: relative;
