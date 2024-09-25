@@ -56,9 +56,6 @@ header .header_top .tnb ul {
 header .header_top .tnb ul li a {
     padding-left: 30px;
 }
-header .header_top .tnb ul li.login a {
-    padding-right: 30px;
-}
 header .header_top .tnb ul li a:hover {
     font-weight: 500;
 }
@@ -345,7 +342,7 @@ header .header_bottom .logo a::before {
     display: none;
 }
 .quick .quick_cont ul {
-    width: 80px;
+    width: 75px;
     border: 1px solid var(--txt-color-gray2);
     border-radius: 10px 0 0 10px;
     background-color: var(--color-main3);
@@ -361,6 +358,7 @@ header .header_bottom .logo a::before {
     padding-top: 45px;
     font-size: 13px;
     margin: 20px 0;
+    letter-spacing: -0.02em;
 }
 .quick .quick_cont ul li button {
     height: 75px;
@@ -419,9 +417,9 @@ header .header_bottom .logo a::before {
     height: 33px;
 }
 
-@media screen and (max-width:1300px) {
+@media screen and (max-width:1024px) {
     .quick {
-        top: 81%;
+        top: 90%;
     }
     .quick .quick_cont ul li {
         display: none;
