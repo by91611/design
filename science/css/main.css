@@ -254,11 +254,11 @@
     color: var(--color-main1);
     margin: 10px 0 20px 0;
 }
-.program .swiper .swiper-slide .tit .class dl {
+.program .swiper .swiper-slide .tit .class li {
     margin-right: 16px;
     position: relative;
 }
-.program .swiper .swiper-slide .tit .class dl::after {
+.program .swiper .swiper-slide .tit .class li:first-child::after {
     position: absolute;
     right: -8px;
     top: 50%;
@@ -281,14 +281,15 @@
 .program .swiper .swiper-slide .txt .target,
 .program .swiper .swiper-slide .txt .time {
     display: flex;
+    position: relative;
 }
-.program .swiper .swiper-slide .txt dl {
+.program .swiper .swiper-slide .txt ul li:first-child {
     color: var(--txt-color-gray1);
     padding-left: 25px;
     position: relative;
     margin-right: 7px;
 }
-.program .swiper .swiper-slide .txt .target dl::before {
+.program .swiper .swiper-slide .txt .target::before {
     position: absolute;
     left: 0;
     top: 0;
@@ -300,7 +301,7 @@
     background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_77_1243' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='20' height='20'%3E%3Crect width='20' height='20' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_77_1243)'%3E%3Cpath d='M7.49967 11.875C7.20801 11.875 6.96148 11.7743 6.76009 11.5729C6.5587 11.3715 6.45801 11.125 6.45801 10.8333C6.45801 10.5416 6.5587 10.2951 6.76009 10.0937C6.96148 9.89234 7.20801 9.79165 7.49967 9.79165C7.79134 9.79165 8.03787 9.89234 8.23926 10.0937C8.44065 10.2951 8.54134 10.5416 8.54134 10.8333C8.54134 11.125 8.44065 11.3715 8.23926 11.5729C8.03787 11.7743 7.79134 11.875 7.49967 11.875ZM12.4997 11.875C12.208 11.875 11.9615 11.7743 11.7601 11.5729C11.5587 11.3715 11.458 11.125 11.458 10.8333C11.458 10.5416 11.5587 10.2951 11.7601 10.0937C11.9615 9.89234 12.208 9.79165 12.4997 9.79165C12.7913 9.79165 13.0379 9.89234 13.2393 10.0937C13.4406 10.2951 13.5413 10.5416 13.5413 10.8333C13.5413 11.125 13.4406 11.3715 13.2393 11.5729C13.0379 11.7743 12.7913 11.875 12.4997 11.875ZM9.99967 16.6666C11.8608 16.6666 13.4372 16.0208 14.7288 14.7291C16.0205 13.4375 16.6663 11.8611 16.6663 9.99998C16.6663 9.66665 16.6455 9.34373 16.6038 9.03123C16.5622 8.71873 16.4858 8.41665 16.3747 8.12498C16.083 8.19442 15.7913 8.24651 15.4997 8.28123C15.208 8.31595 14.9025 8.33331 14.583 8.33331C13.3191 8.33331 12.1247 8.06248 10.9997 7.52081C9.87467 6.97915 8.91634 6.2222 8.12467 5.24998C7.68023 6.33331 7.04481 7.27429 6.21842 8.0729C5.39204 8.87151 4.43023 9.4722 3.33301 9.87498V9.99998C3.33301 11.8611 3.97884 13.4375 5.27051 14.7291C6.56217 16.0208 8.13856 16.6666 9.99967 16.6666ZM10.0011 17.9166C8.90613 17.9166 7.8769 17.7089 6.91342 17.2933C5.94995 16.8778 5.1119 16.3138 4.39926 15.6014C3.68662 14.8891 3.12238 14.0514 2.70655 13.0883C2.29085 12.1253 2.08301 11.0963 2.08301 10.0014C2.08301 8.90644 2.29079 7.8772 2.70634 6.91373C3.1219 5.95026 3.68586 5.1122 4.39822 4.39956C5.11058 3.68692 5.94829 3.12269 6.91134 2.70685C7.8744 2.29116 8.90335 2.08331 9.99822 2.08331C11.0932 2.08331 12.1225 2.29109 13.0859 2.70665C14.0494 3.1222 14.8875 3.68616 15.6001 4.39852C16.3127 5.11088 16.877 5.94859 17.2928 6.91165C17.7085 7.8747 17.9163 8.90366 17.9163 9.99852C17.9163 11.0935 17.7086 12.1228 17.293 13.0862C16.8775 14.0497 16.3135 14.8878 15.6011 15.6004C14.8888 16.313 14.0511 16.8773 13.088 17.2931C12.125 17.7088 11.096 17.9166 10.0011 17.9166Z' fill='%23999999'/%3E%3C/g%3E%3C/svg%3E%0A");
     content: "";
 }
-.program .swiper .swiper-slide .txt .time dl::before {
+.program .swiper .swiper-slide .txt .time::before {
     position: absolute;
     left: 0;
     top: 0;
@@ -439,6 +440,9 @@
     display: flex;
     align-items: center;
 }
+.notice .notice_left {
+    position: relative;
+}
 .notice .notice_left .list ul li a .date {
     position: relative;
     white-space: nowrap;
@@ -478,7 +482,7 @@
 .notice .notice_left .more {
     position: absolute;
     right: 0;
-    top: 0;
+    top: 45px;
 }
 .notice .notice_left .more a {
     padding-left: 20px;
