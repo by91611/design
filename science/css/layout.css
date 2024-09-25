@@ -113,6 +113,9 @@ header .header_bottom .logo a::before {
 }
 
 @media screen and (min-width:1025px) {
+    header .header_bottom .gnb {
+        width: calc(100% - 150px);
+    }
     header .header_bottom .gnb button {
         display: none;
     }
@@ -121,7 +124,7 @@ header .header_bottom .logo a::before {
         text-align: center;
     }
     header .header_bottom .gnb ul.depth1 > li {
-        width: 200px;
+        width: 16.66%;
         position: relative;
     }
     header .header_bottom .gnb ul.depth1 > li > a {
@@ -186,9 +189,6 @@ header .header_bottom .logo a::before {
 }
 
 @media screen and (max-width:1300px) {
-    header .gnb .gnb_wrap ul.depth1 > li {
-        width: 150px;
-    }
     header .gnb .gnb_wrap ul.depth1 > li > a {
         font-size: 18px;
     }

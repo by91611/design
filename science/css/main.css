@@ -26,8 +26,8 @@
 }
 @media screen and (max-width:495px) {
     .visual  h2 {
-        font-size: 24px;
-        padding-top: 200px;
+        font-size: 22px;
+        padding-top: 230px;
         font-weight: 400;
     }
 }
