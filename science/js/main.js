@@ -4,7 +4,7 @@ $(document).ready(function(){
 		slidesPerView: 1, 
 		spaceBetween: 16,
 		breakpoints: {
-			768: {   
+			600: {   
 				slidesPerView: 2,
 				spaceBetween: 16,
 			},

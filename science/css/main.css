@@ -13,6 +13,7 @@
     font-weight: 500;
     color: var(--txt-color-white);
     padding-top: 330px;
+    letter-spacing: -0.04em;
 }
 
 @media screen and (max-width:1024px) {
@@ -732,7 +733,7 @@
 @media screen and (max-width:1024px) {
     .youtube {
         padding: 25px 0 50px 0;
-        margin-top: 50px;
+        margin-top: 25px;
     }
     .youtube h2 {
         font-size: var(--txt-size-tit-mo);
@@ -742,7 +743,7 @@
         text-align: center;
         padding-top: 20px;
     }
-    .youtube {
-        margin-top: 25px;
+    .youtube .swiper ul li a .photo {
+        height: 150px;
     }
 }
