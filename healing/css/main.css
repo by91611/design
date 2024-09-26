@@ -10,7 +10,7 @@
     position: relative;
 }
 .visual .swiper ul li {
-    height: 100vh;
+    height: 1000PX;
 }
 .visual .swiper ul li .tit {
     position: absolute;
