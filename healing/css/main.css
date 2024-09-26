@@ -10,7 +10,7 @@
     position: relative;
 }
 .visual .swiper ul li {
-    height: 1000PX;
+    height: 800PX;
 }
 .visual .swiper ul li .tit {
     position: absolute;
@@ -100,7 +100,7 @@
 }
 @media screen and (max-width:1024px) {
     .visual .swiper ul li {
-        height: 750px;
+        height: 600px;
     }
     .visual .swiper ul li .tit strong {
         font-size: 22px;
@@ -112,7 +112,7 @@
 }
 @media screen and (max-width:768px) {
     .visual .swiper ul li {
-        height: 500px;
+        height: 450px;
     }
     .visual .swiper ul li .tit strong {
         font-size: 20px;
