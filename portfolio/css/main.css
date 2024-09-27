@@ -1,0 +1,44 @@
+@import url(default.css);
+@import url(fonts.css);
+@import url(common.css);
+@import url(layout.css);
+
+.home {
+    background-color: #000;
+    padding: 0 2%;
+}
+.home .contact {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 200;
+}
+.home .contact ul {
+    display: flex;
+    display: sp;
+}
+.home .contact ul li span {
+    display: block;
+}
+
+
+
+
+.about {
+    background-color: #f2f2f2;
+}
+
+.hlsi {
+    background-color: var(--color-main1);
+}
+
+.seaworld {
+    background-color: var(--color-main2);
+}
+
+.healing {
+    background-color: var(--color-main3);
+}
+.contact 
+{
+    background-color: #000;
+}
