@@ -10,19 +10,19 @@ html, body {
 }
 
 #wrap {
-    min-width: 1840px;
+    min-width: 1880px;
     overflow: hidden;
 }
-
+body {
+    min-width: 1880px;
+}
 .wrapper {
     width: 1840px; 
-    margin: 0 2%;
+    margin: 0 auto;
 }
 
-@media screen and (max-width:1024px){ 
-    #wrap {
-        min-width: 100%; /* wrapper의 사이즈(1260px)에 좌우 20px씩 추가한 사이즈 */
-    }
+@media screen and (max-width:1880px){ 
+
     html, body {
         font-size: 16px;
     }    
