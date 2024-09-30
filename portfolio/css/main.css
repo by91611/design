@@ -5,40 +5,253 @@
 
 .home {
     background-color: #000;
-    padding: 0 2%;
+    color: var(--txt-color-white);
 }
+.home .type {
+    height: 100px;
+}
+.home .wrapper {
+    position: relative;
+    height: 100vh;
+}
+.home h2 {
+    text-align: center;
+    font-size: var(--txt-size-tit);
+    color: var(--txt-color-white);
+    padding-top: 20%;
+}  
 .home .contact {
-    color: #fff;
+    position: absolute;
+    right: 0;
+    bottom: 40px;
     font-size: 1rem;
     font-weight: 200;
+    text-align: right;
 }
-.home .contact ul {
-    display: flex;
-    display: sp;
-}
-.home .contact ul li span {
-    display: block;
-}
-
-
-
 
 .about {
     background-color: #f2f2f2;
 }
+.about .wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+.about .tit {
+    width: 50%;
+}
+.about .tit h2 {
+    font-size: var(--txt-size-tit);
+    color: var(--txt-color-tit);
+}
+.about .tit span {
+    font-size: var(--txt-size-txt);
+}
+.about .tit span em {
+    font-weight: 600;
+}
+.about .tit p {
+    width: 533px;
+    padding-top: 460px;
+}
+.about .cnt {
+    width: 50%;
+}
+.about .cnt ul.depth1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 80px;
+}
+.about .cnt ul.depth1 > li  {
+    width: 360px;
+}
+.about .cnt ul.depth1 > li > h3 {
+    font-size: var(--txt-size-txt);
+    color: var(--txt-color-tit);
+    padding-bottom: 20px;
+}
+.about .cnt ul.depth1 > li:nth-child(odd) {
+    transform: translateY(30px);
+}
+.about .cnt ul.depth1 > li:nth-child(even) {
+    transform: translateY(150px);
+}
+.about .cnt ul.depth2 > ul > li {
+    padding-bottom: 15px;
+}
+
 
 .hlsi {
     background-color: var(--color-main1);
+    color: var(--txt-color-main1);
+}
+.hlsi .wrapper {
+    display: flex;
+}
+.hlsi .cnt .tit h2 {
+    font-size: var(--txt-size-tit);
+    font-weight: 500;
+}
+.hlsi .cnt .tit p {
+    width: 700px;
+}
+.hlsi .tit a {
+    display: block;
+    width: 187px;
+    height: 54px;
+    border: 1px solid var(--txt-color-main1);
+    padding: 12px 67px 12px 37px;
+    margin: 30px 0 284px 0; 
+    position: relative;
+} 
+.hlsi .cnt .tit a::after {
+    position: absolute;
+    right: 33px;
+    top: 15px;
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_51_19' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='24' height='24'%3E%3Crect width='24' height='24' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_51_19)'%3E%3Cpath d='M14.8365 18.6634L13.7673 17.6191L18.6462 12.7401H2.5V11.2404H18.6558L13.7923 6.36139L14.8365 5.31714L21.5095 11.9904L14.8365 18.6634Z' fill='%233A5630'/%3E%3C/g%3E%3C/svg%3E%0A");
+    content: "";
+
+}
+.hlsi .cnt ul li  {
+    margin-bottom: 10px;
+}
+.hlsi .cnt ul li strong {
+    display: inline-block;
+    width: 120px;
+    font-weight: 600;
+}
+.hlsi .photo {
+    width: 50%;
+}
+.hlsi .photo img {
+    margin-left: 30%;
 }
 
 .seaworld {
     background-color: var(--color-main2);
+    color: var(--txt-color-main2);
 }
+.seaworld .wrapper {
+    display: flex;
+}
+.seaworld .cnt .tit h2 {
+    font-size: var(--txt-size-tit);
+    font-weight: 500;
+}
+.seaworld .cnt .tit p {
+    width: 700px;
+}
+.seaworld .tit a {
+    display: block;
+    width: 187px;
+    height: 54px;
+    border: 1px solid var(--txt-color-main2);
+    padding: 12px 67px 12px 37px;
+    margin: 30px 0 284px 0; 
+    position: relative;
+} 
+.seaworld .cnt .tit a::after {
+    position: absolute;
+    right: 33px;
+    top: 15px;
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_51_19' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='24' height='24'%3E%3Crect width='24' height='24' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_51_19)'%3E%3Cpath d='M14.8365 18.6634L13.7673 17.6191L18.6462 12.7401H2.5V11.2404H18.6558L13.7923 6.36139L14.8365 5.31714L21.5095 11.9904L14.8365 18.6634Z' fill='%23173257'/%3E%3C/g%3E%3C/svg%3E%0A");
+    content: "";
+
+}
+.seaworld .cnt ul li  {
+    margin-bottom: 10px;
+}
+.seaworld .cnt ul li strong {
+    display: inline-block;
+    width: 120px;
+    font-weight: 600;
+}
+.seaworld .photo {
+    width: 50%;
+}
+.seaworld .photo img {
+    margin: 10% 0 0 30%;
+}
+
 
 .healing {
     background-color: var(--color-main3);
+    color: var(--txt-color-main3);
 }
-.contact 
-{
+.healing .wrapper {
+    display: flex;
+}
+.healing .cnt .tit h2 {
+    font-size: var(--txt-size-tit);
+    font-weight: 500;
+}
+.healing .cnt .tit p {
+    width: 700px;
+}
+.healing .tit a {
+    display: block;
+    width: 187px;
+    height: 54px;
+    border: 1px solid var(--txt-color-main3);
+    padding: 12px 67px 12px 37px;
+    margin: 30px 0 284px 0; 
+    position: relative;
+} 
+.healing .cnt .tit a::after {
+    position: absolute;
+    right: 33px;
+    top: 15px;
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_51_19' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='24' height='24'%3E%3Crect width='24' height='24' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_51_19)'%3E%3Cpath d='M14.8365 18.6634L13.7673 17.6191L18.6462 12.7401H2.5V11.2404H18.6558L13.7923 6.36139L14.8365 5.31714L21.5095 11.9904L14.8365 18.6634Z' fill='%23F96E2B'/%3E%3C/g%3E%3C/svg%3E%0A");
+    content: "";
+
+}
+.healing.cnt ul li  {
+    margin-bottom: 10px;
+}
+.healing .cnt ul li strong {
+    display: inline-block;
+    width: 120px;
+    font-weight: 600;
+}
+.healing .photo {
+    width: 50%;
+    margin: 10% 0 0 10%;
+}
+
+.contact {
     background-color: #000;
+    color: var(--txt-color-white);
+}
+.contact .type {
+    height: 100px;
+}
+.contact .wrapper {
+    position: relative;
+    height: 100vh;
+}
+.contact h2 {
+    text-align: center;
+    font-size: var(--txt-size-tit);
+    color: var(--txt-color-white);
+    padding-top: 20%;
+}  
+.contact .contact {
+    position: absolute;
+    right: 0;
+    bottom: 40px;
+    font-size: 1rem;
+    font-weight: 200;
+    text-align: right;
 }

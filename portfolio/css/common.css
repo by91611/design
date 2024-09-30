@@ -1,10 +1,10 @@
 html, body {
     font-family: "Kanit", sans-serif, "Pretendard",  "Malgun Gothic", "맑은 고딕", Dotum, 돋움, Helvetica, "Apple SD Gothic Neo", "애플 SD 산돌고딕 Neo", sans-serif;
-    font-weight: 400;
-    font-size: 20px;
+    font-weight: 300;
+    font-size: 18px;
     letter-spacing: 0; 
     line-height: 1.4; 
-    color: #3d3d3d; 
+    color: #5d5d5d; 
     word-break: keep-all; 
     word-wrap: break-word; 
 }
@@ -16,7 +16,7 @@ html, body {
 
 .wrapper {
     width: 1840px; 
-    margin: 0 auto; 
+    margin: 0 2%;
 }
 
 @media screen and (max-width:1024px){ 
@@ -32,16 +32,13 @@ html, body {
     --color-main1: #E5EECC;
     --color-main2: #CAE6F1;
     --color-main3: #F0E9E1;
-    --txt-color-main1: #182916;
+    --txt-color-main1: #3A5630;
     --txt-color-main2: #173257;
     --txt-color-main3: #F96E2B;
     --txt-color-tit: #1d1d1d;
     --txt-color-txt: #3d3d3d;
     --txt-color-gray: #666;
     --txt-color-white: #fff;
-    --txt-size-tit: 4.8rem; 
+    --txt-size-tit: 5rem; 
     --txt-size-txt: 1.2rem; 
 }
-
-/*  96px: 4.8rem; 
-    24px: 1.2rem;  */

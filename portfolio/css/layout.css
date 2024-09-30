@@ -25,6 +25,15 @@ header.blue {
 header.orange {
     color: var(--txt-color-main3);
 }
+header.white li.white,
+header.green li.green,
+header.blue li.blue,
+header.black li.black,
+header.orange li.orange,
+header.white2 li.white2 {
+    font-weight: 500;
+}
+
 
 header .gnb ul {
     display: flex;

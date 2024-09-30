@@ -14,13 +14,18 @@ $(document).ready(function(){
 		  scrollOverflow: false, /* 컨텐츠가 넘쳐도 스크롤 금지 */
   
 		  afterLoad: function(origin, destination, direction, trigger){
-			  if((destination.index == 1)){ 
-				  $('header').addClass('black')
-			  }else{
-				  $('header').removeClass('black')
-			  }
-			  if((destination.index == 2)){ 
-				$('header').addClass('green')
+			if((destination.index == 0 )){ 
+				$('header').addClass('white')
+			}else{
+				$('header').removeClass('white')
+			}
+			if((destination.index == 1)){ 
+				$('header').addClass('black')
+			}else{
+				$('header').removeClass('black')
+			}
+			if((destination.index == 2)){ 
+			$('header').addClass('green')
 			}else{
 				$('header').removeClass('green')
 			}
@@ -34,10 +39,15 @@ $(document).ready(function(){
 			}else{
 				$('header').removeClass('orange')
 			}
+			if((destination.index == 5)){ 
+				$('header').addClass('white2')
+			}else{
+				$('header').removeClass('white2')
+			}
 		  },
   
 		  responsiveWidth: 1025 /* fullpage를 적용시키지 않을 모바일 사이즈 */
 	  });
   
-  
+	  gsap.from(".type", {duration: 2, text: ""})
   })
